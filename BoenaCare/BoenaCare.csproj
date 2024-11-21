@@ -122,6 +122,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AutenticacionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PacientesController.cs" />
+    <Compile Include="Controllers\TratamientosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -165,6 +167,9 @@
     <Content Include="Recursos\img\categories\02.jpg" />
     <Content Include="Recursos\img\categories\03.jpg" />
     <Content Include="Recursos\img\categories\04.jpg" />
+    <Content Include="Recursos\img\logos\Logo Boena-01.png" />
+    <Content Include="Recursos\img\logos\Logo Boena-04.png" />
+    <Content Include="Recursos\img\logos\Logo Boena-06.png" />
     <Content Include="Recursos\img\svg\404.svg" />
     <Content Include="Recursos\img\svg\baloon.svg" />
     <Content Include="Recursos\img\svg\Bulk\2 User.svg" />
@@ -347,6 +352,8 @@
     <Content Include="Views\Shared\_LayoutExterno.cshtml" />
     <Content Include="Views\Autenticacion\Login.cshtml" />
     <Content Include="Views\Autenticacion\RecuperarContrasenna.cshtml" />
+    <Content Include="Views\Pacientes\Listado.cshtml" />
+    <Content Include="Views\Tratamientos\ListadoPacientes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
