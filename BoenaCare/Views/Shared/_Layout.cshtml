@@ -9,7 +9,11 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="~/Recursos/img/svg/logo.svg" type="image/x-icon">
     <!-- Custom styles -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
     <link rel="stylesheet" href="~/Recursos/css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css">
 </head>
 
 <body>
@@ -21,123 +25,38 @@
         <aside class="sidebar">
             <div class="sidebar-start">
                 <div class="sidebar-head">
-                    <a href="/" class="logo-wrapper" title="Home">
-                        <span class="sr-only">Home</span>
-                        <span class="icon logo" aria-hidden="true"></span>
-                        <div class="logo-text">
-                            <span class="logo-title">BoenaCare    </span>
-                            <span class="logo-subtitle">Fisioterapia </span>
-                        </div>
-
-                    </a>
                     <button class="sidebar-toggle transparent-btn" title="Menu" type="button">
                         <span class="sr-only">Toggle menu</span>
                         <span class="icon menu-toggle" aria-hidden="true"></span>
                     </button>
+                    <a href="/" class="logo-wrapper" title="Home">
+                        <span class="sr-only">Home</span>
+                        <img src="~/Recursos/img/logos/Logo Boena-06.png" class="icon" style="width: 80%" />
+                    </a>
                 </div>
                 <div class="sidebar-body">
                     <ul class="sidebar-body-menu">
                         <li>
-                            <a class="active" href="/"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
+                            <a class="active" href="/"><span class="icon home" aria-hidden="true"></span>Inicio</a>
                         </li>
                         <li>
-                            <a class="show-cat-btn" href="##">
-                                <span class="icon document" aria-hidden="true"></span>Posts
-                                <span class="category__btn transparent-btn" title="Open list">
-                                    <span class="sr-only">Open list</span>
-                                    <span class="icon arrow-down" aria-hidden="true"></span>
-                                </span>
-                            </a>
-                            <ul class="cat-sub-menu">
-                                <li>
-                                    <a href="posts.html">All Posts</a>
-                                </li>
-                                <li>
-                                    <a href="new-post.html">Add new post</a>
-                                </li>
-                            </ul>
+                            <a href="@Url.Action("Listado", "Pacientes")"><span class="icon user-3" aria-hidden="true"></span>Pacientes</a>
                         </li>
                         <li>
-                            <a class="show-cat-btn" href="##">
-                                <span class="icon folder" aria-hidden="true"></span>Categories
-                                <span class="category__btn transparent-btn" title="Open list">
-                                    <span class="sr-only">Open list</span>
-                                    <span class="icon arrow-down" aria-hidden="true"></span>
-                                </span>
-                            </a>
-                            <ul class="cat-sub-menu">
-                                <li>
-                                    <a href="categories.html">All categories</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="show-cat-btn" href="##">
-                                <span class="icon image" aria-hidden="true"></span>Media
-                                <span class="category__btn transparent-btn" title="Open list">
-                                    <span class="sr-only">Open list</span>
-                                    <span class="icon arrow-down" aria-hidden="true"></span>
-                                </span>
-                            </a>
-                            <ul class="cat-sub-menu">
-                                <li>
-                                    <a href="media-01.html">Media-01</a>
-                                </li>
-                                <li>
-                                    <a href="media-02.html">Media-02</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="show-cat-btn" href="##">
-                                <span class="icon paper" aria-hidden="true"></span>Pages
-                                <span class="category__btn transparent-btn" title="Open list">
-                                    <span class="sr-only">Open list</span>
-                                    <span class="icon arrow-down" aria-hidden="true"></span>
-                                </span>
-                            </a>
-                            <ul class="cat-sub-menu">
-                                <li>
-                                    <a href="pages.html">All pages</a>
-                                </li>
-                                <li>
-                                    <a href="new-page.html">Add new page</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="comments.html">
-                                <span class="icon message" aria-hidden="true"></span>
-                                Comments
-                            </a>
-                            <span class="msg-counter">7</span>
+                            <a href="/"><span class="icon folder" aria-hidden="true"></span>Archivos</a>
                         </li>
                     </ul>
-                    <span class="system-menu__title">system</span>
+                    <span class="system-menu__title">Administración</span>
                     <ul class="sidebar-body-menu">
                         <li>
-                            <a href="appearance.html"><span class="icon edit" aria-hidden="true"></span>Appearance</a>
+                            <a href="appearance.html"><span class="icon edit" aria-hidden="true"></span>Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="/"><span class="icon user-3" aria-hidden="true"></span>Personal</a>
                         </li>
                         <li>
                             <a class="show-cat-btn" href="##">
-                                <span class="icon category" aria-hidden="true"></span>Extentions
-                                <span class="category__btn transparent-btn" title="Open list">
-                                    <span class="sr-only">Open list</span>
-                                    <span class="icon arrow-down" aria-hidden="true"></span>
-                                </span>
-                            </a>
-                            <ul class="cat-sub-menu">
-                                <li>
-                                    <a href="extention-01.html">Extentions-01</a>
-                                </li>
-                                <li>
-                                    <a href="extention-02.html">Extentions-02</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="show-cat-btn" href="##">
-                                <span class="icon user-3" aria-hidden="true"></span>Users
+                                <span class="icon user-3" aria-hidden="true"></span>Gestión Externa
                                 <span class="category__btn transparent-btn" title="Open list">
                                     <span class="sr-only">Open list</span>
                                     <span class="icon arrow-down" aria-hidden="true"></span>
@@ -176,32 +95,18 @@
             <!-- ! Main nav -->
             <nav class="main-nav--bg">
                 <div class="container main-nav">
-                    <div class="main-nav-start">
+
+                    <div class="main-nav-start" style="display: flex">
                         <div class="search-wrapper">
                             <i data-feather="search" aria-hidden="true"></i>
                             <input type="text" placeholder="Busqueda ..." required>
                         </div>
                     </div>
+
                     <div class="main-nav-end">
                         <button class="sidebar-toggle transparent-btn" title="Menu" type="button">
                             <span class="sr-only">Toggle menu</span>
                             <span class="icon menu-toggle--gray" aria-hidden="true"></span>
-                        </button>
-                        <div class="lang-switcher-wrapper">
-                            <button class="lang-switcher transparent-btn" type="button">
-                                EN
-                                <i data-feather="chevron-down" aria-hidden="true"></i>
-                            </button>
-                            <ul class="lang-menu dropdown">
-                                <li><a href="##">English</a></li>
-                                <li><a href="##">French</a></li>
-                                <li><a href="##">Uzbek</a></li>
-                            </ul>
-                        </div>
-                        <button class="theme-switcher gray-circle-btn" type="button" title="Switch theme">
-                            <span class="sr-only">Switch theme</span>
-                            <i class="sun-icon" data-feather="sun" aria-hidden="true"></i>
-                            <i class="moon-icon" data-feather="moon" aria-hidden="true"></i>
                         </button>
                         <div class="notification-wrapper">
                             <button class="gray-circle-btn dropdown-btn" title="To messages" type="button">
@@ -287,7 +192,7 @@
                 </div>
             </nav>
             <!-- ! Main -->
-            <main class="main users chart-page" id="skip-target">
+            <main class="main users chart-page px-3" id="skip-target">
                 @RenderBody()
             </main>
             <!-- ! Footer -->
@@ -295,8 +200,8 @@
                 <div class="container footer--flex">
                     <div class="footer-start">
                         <p>
-                            2025 © BoenaCare 
-                                                         
+                            2025 © BoenaCare
+
                         </p>
                     </div>
                     <ul class="footer-end">
@@ -314,6 +219,8 @@
     <script src="~/Recursos/plugins/feather.min.js"></script>
     <!-- Custom scripts -->
     <script src="~/Recursos/js/script.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
 </body>
 
 </html>
