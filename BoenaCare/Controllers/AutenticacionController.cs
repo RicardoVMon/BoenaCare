@@ -15,7 +15,7 @@ namespace BoenaCare.Controllers
         }
 
         [HttpGet]
-        public ActionResult RecuperarContrasennia()
+        public ActionResult RecuperarContrasenna()
         {
             return View();
         }
