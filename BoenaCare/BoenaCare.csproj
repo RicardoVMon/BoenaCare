@@ -123,6 +123,7 @@
     <Compile Include="Controllers\AutenticacionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PacientesController.cs" />
+    <Compile Include="Controllers\PersonalController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -353,6 +354,7 @@
     <Content Include="Views\Autenticacion\RecuperarContrasenna.cshtml" />
     <Content Include="Views\Pacientes\Listado.cshtml" />
     <Content Include="Views\Tratamientos\ListadoPacientes.cshtml" />
+    <Content Include="Views\Personal\Personal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
