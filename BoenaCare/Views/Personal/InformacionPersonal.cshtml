@@ -1,0 +1,199 @@
+﻿<div class="container">
+    <div class="row">
+        <!-- Información del empleado -->
+        <div class="col-md-8">
+            <div class="container-form ms-5 mt-4 mx-auto p-4 rounded shadow-lg" style="max-width: 900px; background-color: #f9f9f9;">
+                <h3 class="text-center mb-4">Información del Empleado</h3>
+                <div class="row g-3">
+                    <!-- Nombre -->
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="PersonalNombre" value="Ignasio Miranda" readonly>
+                            <label for="PersonalNombre">Nombre</label>
+                        </div>
+                    </div>
+
+                    <!-- Fecha de contratación -->
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="date" class="form-control" id="PersonalFechaContratacion" value="2023-02-15" readonly>
+                            <label for="PersonalFechaContratacion">Fecha de contratación</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3 mt-2">
+                    <!-- Alias -->
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="PersonalAlias" value="Ignacio" readonly>
+                            <label for="PersonalAlias">Alias</label>
+                        </div>
+                    </div>
+
+                    <!-- Edad -->
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="PersonalEdad" value="45" readonly>
+                            <label for="PersonalEdad">Edad</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3 mt-2">
+                    <!-- Correo -->
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="PersonalCorreo" value="ignasio.miranda@email.com" readonly>
+                            <label for="PersonalCorreo">Correo</label>
+                        </div>
+                    </div>
+
+                    <!-- Cédula -->
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="PersonalCedula" value="123456789" readonly>
+                            <label for="PersonalCedula">Cédula</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3 mt-2">
+                    <!-- Especialidad -->
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <select class="form-select" id="PersonalEspecialidad" disabled>
+                                <option value="geriatrica" selected>Fisioterapia Geriátrica</option>
+                                <option value="deportiva">Fisioterapia Deportiva</option>
+                                <option value="pediatrica">Fisioterapia Pediátrica</option>
+                                <option value="neurologica">Fisioterapia Neurológica</option>
+                            </select>
+                            <label for="PersonalEspecialidad">Especialidad</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto -->
+                <div class="row g-3 mt-2">
+                    <div class="col-md text-center">
+                        <img src="https://images.pexels.com/photos/1844547/pexels-photo-1844547.jpeg" class="img-fluid" alt="Foto de empleado" style="max-width: 150px;">
+                    </div>
+                </div>
+
+                <!-- Botones Editar y Eliminar -->
+                <div class="row g-2 mt-4 text-center">
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-warning w-100" id="editarEmpleado">Editar</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-danger w-100" id="eliminarEmpleado">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Asignaciones de Pacientes -->
+        <div class="col-md-4">
+            <div class="container-form ms-5 mt-4 mx-auto p-4 rounded shadow-lg" style="max-width: 900px; background-color: #f9f9f9;">
+                <h3 class="text-center mb-4">Asignaciones de Pacientes</h3>
+
+                <!-- Lista de Asignaciones -->
+                <div class="list-group">
+                    <!-- Paciente  -->
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <p><strong>Paciente:</strong> Juan Pérez</p>
+                            <p><strong>Estado:</strong> Asignado</p>
+                        </div>
+                        <div>
+                            <button class="btn btn-warning btn-sm" id="editarAsignacion1">Editar</button>
+                            <button class="btn btn-danger btn-sm" id="eliminarAsignacion1">Eliminar</button>
+                        </div>
+                    </div>
+                    <!-- Paciente -->
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <p><strong>Paciente:</strong> Maria Gómez</p>
+                            <p><strong>Estado:</strong> Asignado</p>
+                        </div>
+                        <div>
+                            <button class="btn btn-warning btn-sm" id="editarAsignacion2">Editar</button>
+                            <button class="btn btn-danger btn-sm" id="eliminarAsignacion2">Eliminar</button>
+                        </div>
+                    </div>
+                    <!-- Paciente -->
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <p><strong>Paciente:</strong> Carlos Soto</p>
+                            <p><strong>Estado:</strong> Asignado</p>
+                        </div>
+                        <div>
+                            <button class="btn btn-warning btn-sm" id="editarAsignacion3">Editar</button>
+                            <button class="btn btn-danger btn-sm" id="eliminarAsignacion3">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Permisos de Acceso -->
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="container-form ms-5 mt-4 mx-auto p-4 rounded shadow-lg" style="max-width: 900px; background-color: #f9f9f9;">
+                <h3 class="text-center mb-4">Permisos de Acceso</h3>
+
+                <div class="row g-3">
+                    <!-- Permiso-->
+                    <div class="col-md">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="permisoArchivos" checked>
+                            <label class="form-check-label" for="permisoArchivos">
+                                Acceso a Archivos
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Permiso -->
+                    <div class="col-md">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="permisoPersonal" checked>
+                            <label class="form-check-label" for="permisoPersonal">
+                                Acceso a Personal
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3 mt-2">
+                    <!-- Permiso -->
+                    <div class="col-md">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="permisoPacientes" checked>
+                            <label class="form-check-label" for="permisoPacientes">
+                                Acceso a Pacientes
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Permiso -->
+                    <div class="col-md">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="permisoReportes">
+                            <label class="form-check-label" for="permisoReportes">
+                                Acceso a Reportes
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón de Guardar Permisos -->
+                <div class="row g-2 mt-4 text-center">
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-primary w-100" id="guardarPermisos">Guardar Permisos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
