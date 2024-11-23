@@ -8,8 +8,18 @@ namespace BoenaCare.Controllers
 {
     public class PersonalController : Controller
     {
-        // GET: Personal
+        
         public ActionResult Personal()
+        {
+            return View();
+        }
+
+        public ActionResult AgregarPersonal()
+        {
+            return View();
+        }
+
+        public ActionResult InformacionPersonal()
         {
             return View();
         }
