@@ -31,6 +31,12 @@ namespace BoenaCare.Controllers
             return View();
         }
 
+        // Funcionalidad: Ficha clinica
+        public ActionResult InformacionPaciente()
+        {
+            return View();
+        }
+
         // Funcionalidad: Archivos 
         public ActionResult Archivos()
         {

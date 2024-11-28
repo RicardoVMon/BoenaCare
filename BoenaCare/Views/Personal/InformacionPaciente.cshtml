@@ -1,0 +1,320 @@
+﻿<div class="row px-5">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-auto">
+                <a href="@Url.Action("Listado", "Personal")" class="btn btn-primary btn-sm">
+                <i class="fa-solid fa-arrow-left"></i> Regresar
+                </a>
+            </div>
+        </div>
+        <div class="row pt-3 pb-1">
+            <div class="col-12">
+                <div class="display-3" style="font-size: 2.5rem;">Paciente: Juan Pérez</div>
+            </div>
+        </div>
+
+        <!--barra tabs-->
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#ficha-clinica">Ficha Clínica</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tratamientos">Tratamientos</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#archivos">Archivos</button>
+                    </li>
+                </ul>
+
+                <!--contenido de cada tab-->
+                <div class="tab-content mt-3">
+
+                    <!-- -------------------inicio ficha clinica------------------ -->
+                    <div class="tab-pane fade show active" id="ficha-clinica">
+                        <div class="container-form mt-4 mx-auto p-4 rounded shadow-lg" style="max-width: 900px; background-color: #f9f9f9;">
+                            <h3 class="text-center mb-4">Ficha Clínica</h3>
+
+                            <!-- Foto de Perfil -->
+                            <div class="row g-3">
+                                <div class="col-md text-center">
+                                    <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid rounded-circle" alt="Foto del paciente" style="max-width: 150px;">
+                                </div>
+                            </div>
+
+                            <!-- Nombre y Cédula -->
+                            <div class="row g-3 mt-2">
+                                <div class="col-md">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="PacienteCedula" value="123456789" readonly>
+                                        <label for="PacienteCedula">Cédula</label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="PacienteNombre" value="Juan" readonly>
+                                        <label for="PacienteNombre">Nombre</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Apellidos -->
+                            <div class="row g-3 mt-2">
+                                <div class="col-md">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="PacienteApellidoPaterno" value="Pérez" readonly>
+                                        <label for="PacienteApellidoPaterno">Apellido Paterno</label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="PacienteApellidoMaterno" value="Gómez" readonly>
+                                        <label for="PacienteApellidoMaterno">Apellido Materno</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Correo y Teléfono -->
+                            <div class="row g-3 mt-2">
+                                <div class="col-md">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="PacienteCorreo" value="juan.perez@example.com" readonly>
+                                        <label for="PacienteCorreo">Correo</label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" id="PacienteTelefono" value="987654321" readonly>
+                                        <label for="PacienteTelefono">Teléfono</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Antecedentes Patológicos y Personales -->
+                            <div class="row g-3 mt-2">
+                                <div class="col-md">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="AntecedentesPatologicos" style="height: 100px;" readonly>Diabetes tipo 2</textarea>
+                                        <label for="AntecedentesPatologicos">Antecedentes Patológicos</label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="AntecedentesPersonales" style="height: 100px;" readonly>No fuma, antecedentes familiares de hipertensión</textarea>
+                                        <label for="AntecedentesPersonales">Antecedentes Personales</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Estilo de Vida y Ejercicio -->
+                            <div class="row g-3 mt-2">
+                                <div class="col-md">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="EstiloVida" style="height: 100px;" readonly>Estilo de vida activo, trabaja como maestro.</textarea>
+                                        <label for="EstiloVida">Estilo de Vida</label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="HaceEjercicio" disabled>
+                                            <option value="si" selected>Sí</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                        <label for="HaceEjercicio">¿Hace ejercicio?</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Consumo de Agua -->
+                            <div class="row g-3 mt-2">
+                                <div class="col-md">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" id="LitrosAgua" value="2" readonly>
+                                        <label for="LitrosAgua">Litros de agua al día</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Botones -->
+                            <div class="row g-2 mt-4 text-center">
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-warning w-100" id="editarFicha">Editar</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-primary w-100" id="descargarFicha">Descargar Ficha Clínica</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- -------------------termina ficha clinica------------------ -->
+                    <!-- -------------------inicio tratamentos------------------ -->
+                    <div class="tab-pane fade" id="tratamientos">
+                        <div class="container mt-4">
+                            <!-- Título -->
+                            <div class="row">
+                                <div class="h3 px-0 col-12">Listado de Tratamientos</div>
+                            </div>
+
+                            <!-- Botones principales -->
+                            <div class="row my-2">
+                                <a href="#" id="AgregarNuevoTratamiento" class="btn btn-primary btn-sm mb-0 col-md-6 col-xl-2">
+                                    <i class="fa-solid fa-plus"></i> Agregar Nuevo Tratamiento
+                                </a>
+                                <a href="#" id="GenerarReporteTratamientos" class="btn btn-success btn-sm mb-0 col-md-6 col-xl-2 ms-2">
+                                    <i class="fa-solid fa-file-export"></i> Generar Reporte
+                                </a>
+                            </div>
+
+                            <!-- Tabla de tratamientos -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <table id="tablaTratamientos" class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Estado</th>
+                                                <th>Evaluación</th>
+                                                <th>Tratamiento</th>
+                                                <th>Archivos</th>
+                                                <th>Monto Cobrado</th>
+                                                <th>Pago</th>
+                                                <th>Solicita Factura</th>
+                                                <th>Opciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Mejorado</td>
+                                                <td>Evaluación inicial</td>
+                                                <td>Fisioterapia</td>
+                                                <td><a href="#">Archivo1.pdf</a></td>
+                                                <td>$100</td>
+                                                <td>Tarjeta</td>
+                                                <td>Sí</td>
+                                                <td class="text-center">
+                                                    <button class="btn btn-warning btn-sm" id="EditarTratamiento1">Editar</button>
+                                                    <button class="btn btn-danger btn-sm" id="EliminarTratamiento1">Eliminar</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Estable</td>
+                                                <td>Seguimiento</td>
+                                                <td>Terapia Ocupacional</td>
+                                                <td><a href="#">Archivo2.pdf</a></td>
+                                                <td>$80</td>
+                                                <td>Efectivo</td>
+                                                <td>No</td>
+                                                <td class="text-center">
+                                                    <button class="btn btn-warning btn-sm" id="EditarTratamiento2">Editar</button>
+                                                    <button class="btn btn-danger btn-sm" id="EliminarTratamiento2">Eliminar</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -------------------termina tratamientos------------------ -->
+                    <!-- -------------------incio archivos------------------ -->
+                    <div class="tab-pane fade" id="archivos">
+                        <div class="row px-5">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="h3 px-0 col-12">Listado de Archivos</div>
+                                </div>
+                                <div class="row my-2">
+                                    <a href="#" id="AgregarNuevoArchivo" class="btn btn-primary btn-sm mb-0 col-md-6 col-xl-2">
+                                        <i class="fa-solid fa-plus"></i> Agregar Nuevo Archivo
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <table id="tablaArchivos" class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Título</th>
+                                                    <th>Fecha de Subida</th>
+                                                    <th>Tipo de Documento</th>
+                                                    <th>Sesión Relacionada</th>
+                                                    <th>Opciones</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Informe de diagnóstico</td>
+                                                    <td>2024-11-28</td>
+                                                    <td>PDF</td>
+                                                    <td>Sesión 3</td>
+                                                    <td class="text-center">
+                                                        <button class="btn btn-primary btn-sm">Ver</button>
+                                                        <button class="btn btn-warning btn-sm">Editar</button>
+                                                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Receta médica</td>
+                                                    <td>2024-11-25</td>
+                                                    <td>Imagen</td>
+                                                    <td>No Aplica</td>
+                                                    <td class="text-center">
+                                                        <button class="btn btn-primary btn-sm">Ver</button>
+                                                        <button class="btn btn-warning btn-sm">Editar</button>
+                                                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- -------------------termina archivos------------------ -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#tablaTratamientos").DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/2.1.8/i18n/es-ES.json',
+                },
+                responsive: true,
+                columnDefs: [
+                    {
+                        targets: [8],
+                        orderable: false,
+                        className: 'text-center'
+                    }
+                ]
+            });
+            $("#tablaArchivos").DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/2.1.8/i18n/es-ES.json',
+                },
+                responsive: true,
+                order: [[2, 'desc']],
+                columnDefs: [
+                    {
+                        targets: [5],
+                        className: 'text-center',
+                        orderable: false
+                    }
+                ]
+            });
+        });
+    </script>
