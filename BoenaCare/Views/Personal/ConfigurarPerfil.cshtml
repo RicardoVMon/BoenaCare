@@ -1,0 +1,82 @@
+﻿@*@model ...*@
+
+@*@using (Html.BeginForm("", ""))
+    {*@
+<section style="background-color: #F0F2FA;">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-4 d-flex">
+                <div class="card mb-4 w-100">
+                    <div class="card-body text-center">
+                        <img src="~/Recursos/img/avatar/avatar-illustrated-01.png" alt="avatar"
+                             class="rounded-circle img-fluid" style="width: 150px;">
+                        <h5 class="my-3">Alexandra Salazar</h5>
+                        <p class="text-muted mb-1">Fisioterapeuta</p>
+                        <p class="text-muted mb-4">Alajuela, Costa Rica</p>
+                        <a href="@Url.Action("Perfil", "Personal")" class="btn btn-danger">
+                            <i data-feather="x-circle" aria-hidden="true"></i>
+                        </a>
+                        <button type="submit" class="btn btn-success">
+                            <i data-feather="check-circle" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 d-flex align-items-center">
+                <div class="card mb-4 w-100">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Cédula</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">123456789</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Nombre</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">Alexandra Salazar</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Correo Electrónico</p>
+                            </div>
+                            <div class="col-sm-9">
+                                @*@Html.TextBoxFor(m => m.Correo, new { @class = "form-control", @type = "email" })*@
+                                <p class="text-muted mb-0">[Textbox]</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Teléfono</p>
+                            </div>
+                            <div class="col-sm-9">
+                                @*@Html.TextBoxFor(m => m.Telefono, new { @class = "form-control" })*@
+                                <p class="text-muted mb-0">[Textbox]</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Dirección</p>
+                            </div>
+                            <div class="col-sm-9">
+                                @*@Html.TextBoxFor(m => m.Direccion, new { @class = "form-control" })*@
+                                <p class="text-muted mb-0">[Textbox]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@*}*@

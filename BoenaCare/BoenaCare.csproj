@@ -120,10 +120,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Administrador\AdministradorController.cs" />
     <Compile Include="Controllers\AutenticacionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PacientesController.cs" />
-    <Compile Include="Controllers\PersonalController.cs" />
+    <Compile Include="Controllers\Personal\PersonalController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -352,11 +352,18 @@
     <Content Include="Views\Shared\_LayoutExterno.cshtml" />
     <Content Include="Views\Autenticacion\Login.cshtml" />
     <Content Include="Views\Autenticacion\RecuperarContrasenna.cshtml" />
-    <Content Include="Views\Pacientes\Listado.cshtml" />
-    <Content Include="Views\Tratamientos\ListadoPacientes.cshtml" />
-    <Content Include="Views\Personal\Personal.cshtml" />
-    <Content Include="Views\Personal\AgregarPersonal.cshtml" />
-    <Content Include="Views\Personal\InformacionPersonal.cshtml" />
+    <Content Include="Views\Personal\Listado.cshtml" />
+    <Content Include="Views\Administrador\Personal.cshtml" />
+    <Content Include="Views\Administrador\AgregarPersonal.cshtml" />
+    <Content Include="Views\Administrador\InformacionPersonal.cshtml" />
+    <Content Include="Views\Personal\Perfil.cshtml" />
+    <Content Include="Views\Personal\ConfigurarPerfil.cshtml" />
+    <Content Include="Views\Administrador\Perfil.cshtml" />
+    <Content Include="Views\Administrador\ConfigurarPerfil.cshtml" />
+    <Content Include="Views\Administrador\Dashboard.cshtml" />
+    <Content Include="Views\Personal\Inicio.cshtml" />
+    <Content Include="Views\Personal\Archivos.cshtml" />
+    <Content Include="Views\Personal\InformacionPaciente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
