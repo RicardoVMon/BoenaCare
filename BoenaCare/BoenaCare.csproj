@@ -364,6 +364,7 @@
     <Content Include="Views\Personal\Inicio.cshtml" />
     <Content Include="Views\Personal\Archivos.cshtml" />
     <Content Include="Views\Personal\InformacionPaciente.cshtml" />
+    <Content Include="Views\Administrador\AsignarPaciente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
