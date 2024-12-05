@@ -44,5 +44,11 @@ namespace BoenaCare.Controllers
         {
             return View();
         }
+
+        // Funcionalidad: Auditoria 
+        public ActionResult Auditoria()
+        {
+            return View();
+        }
     }
 }
