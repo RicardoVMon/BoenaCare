@@ -1,12 +1,16 @@
 ﻿<div class="row my-2 ms-5 mt-4">
-    <a href="@Url.Action("AgregarPersonal", "Personal")" id="AgregarNuevoPersonal" class="btn btn-primary  mb-0 col-md-6 col-xl-2">
+    <a href="@Url.Action("AgregarPersonal", "Administrador")" id="AgregarNuevoPersonal" class="btn btn-primary  mb-0 col-md-6 col-xl-2">
         <i class="fa-solid fa-plus"></i> Agregar Nuevo
     </a>
 </div>
 
 <!-- Filtros  -->
-<div class="row my-2 ms-5 mt-4 ">
-    <div class="col-md-8"></div> <!-- Espaciador a la izquierda -->
+<div class="row mt-4" style="margin-right:380px;">
+    <div class="col-md-8"></div>
+    <!-- Barra de búsqueda -->
+    <div class="col-md-2">
+        <input type="text" class="form-control" placeholder="Buscar..." style="border-radius: 10px;">
+    </div>
     <div class="col-md-2">
         <select class="form-select" style="border-radius: 10px;">
             <option selected disabled>Ordenar por</option>
@@ -30,7 +34,7 @@
             <h5 class="card-title">Ignasio Miranda</h5>
             <p class="card-text">Fisioterapeuta Geriátrico</p>
             <br />
-            <a href="@Url.Action("InformacionPersonal", "Personal")" class="btn btn-primary">Visualizar</a>
+            <a href="@Url.Action("InformacionPersonal", "Administrador")" class="btn btn-primary">Visualizar</a>
         </div>
     </div>
 
@@ -40,7 +44,7 @@
             <h5 class="card-title">Claudia Gomez</h5>
             <p class="card-text">Fisioterapeuta Deportiva</p>
             <br />
-            <a href="@Url.Action("InformacionPersonal", "Personal")" class="btn btn-primary">Visualizar</a>
+            <a href="@Url.Action("InformacionPersonal", "Administrador")" class="btn btn-primary">Visualizar</a>
         </div>
     </div>
 
@@ -50,7 +54,7 @@
             <h5 class="card-title">Graciela Ulate</h5>
             <p class="card-text">Fisioterapeuta Pediátrica</p>
             <br />
-            <a href="@Url.Action("InformacionPersonal", "Personal")" class="btn btn-primary">Visualizar</a>
+            <a href="@Url.Action("InformacionPersonal", "Administrador")" class="btn btn-primary">Visualizar</a>
         </div>
     </div>
 
@@ -60,7 +64,7 @@
             <h5 class="card-title">Graciela Ulate</h5>
             <p class="card-text">Fisioterapeuta Pediátrica</p>
             <br />
-            <a href="@Url.Action("InformacionPersonal", "Personal")" class="btn btn-primary">Visualizar</a>
+            <a href="@Url.Action("InformacionPersonal", "Administrador")" class="btn btn-primary">Visualizar</a>
         </div>
     </div>
 </div>
