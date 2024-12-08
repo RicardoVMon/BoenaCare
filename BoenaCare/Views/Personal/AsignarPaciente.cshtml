@@ -1,13 +1,14 @@
-﻿<div class="row px-5">
+﻿<a href="@Url.Action("Gestion", "Personal")" class="btn btn-primary btn-sm mb-3">
+    <i class="fa-solid fa-arrow-left"></i> Regresar
+</a>
+<div class="row px-5">
     <div class="col-12">
         <div class="row">
-            <div class="display-3 px-0 col-12 ">Listado de Pacientes</div>
-            <div class="text-muted px-0 ">Seleccione un paciente para visualizar su historial de tratamientos</div>
+            <div class="display-3 px-0 col-12 ">Asignar Paciente</div>
+            <div class="text-muted px-0 ">Le esta asignando pacientes a (aqui el nombre del fisio)</div>
         </div>
         <div class="row my-2">
-            <a href="@Url.Action("AgregarPaciente", "Personal")" id="AgregarNuevoPaciente" class="btn btn-primary btn-sm mb-0 col-md-6 col-xl-2">
-                <i class="fa-solid fa-plus"></i> Agregar Nuevo Paciente
-            </a>
+            <a href="#" id="AgregarNuevoPaciente" class="btn btn-primary btn-sm mb-3 col-md-4 col-xl-2"><i class="fa-solid fa-plus"></i> Agregar Nuevo Paciente</a>
         </div>
         <div class="row">
             <div class="col-12">
@@ -32,9 +33,7 @@
                             <td>Juancho Pérez</td>
                             <td>Activo</td>
                             <td>
-                                <a class="btn btn-primary" href="@Url.Action("InformacionPaciente", "Personal")">Ver</a>
-                                <a class="btn btn-secondary" id="EditarPaciente">Editar</a>
-                                <a class="btn btn-danger" id="DesactivarPaciente">Desactivar</a>
+                                <a class="btn btn-primary" href="@Url.Action("InformacionPersonal", "Administrador")">Asignar</a>
                             </td>
                         </tr>
                         <tr>
@@ -45,9 +44,7 @@
                             <td>Mary</td>
                             <td>Activo</td>
                             <td>
-                                <a class="btn btn-primary" href="@Url.Action("InformacionPaciente", "Personal")">Ver</a>
-                                <a class="btn btn-secondary">Editar</a>
-                                <a class="btn btn-danger">Desactivar</a>
+                                <a class="btn btn-primary" href="@Url.Action("InformacionPersonal", "Administrador")">Asignar</a>
                             </td>
                         </tr>
                         <tr>
@@ -58,9 +55,7 @@
                             <td>Charlie el hijo de doña Sonia</td>
                             <td>Desactivado</td>
                             <td>
-                                <a class="btn btn-primary" href="@Url.Action("InformacionPaciente", "Personal")">Ver</a>
-                                <a class="btn btn-secondary">Editar</a>
-                                <a class="btn btn-danger">Activar</a>
+                                <a class="btn btn-primary" href="@Url.Action("InformacionPersonal", "Administrador")">Asignar</a>
                             </td>
                         </tr>
                     </tbody>

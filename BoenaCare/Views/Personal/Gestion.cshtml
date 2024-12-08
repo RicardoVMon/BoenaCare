@@ -2,7 +2,7 @@
     <div class="col-12">
         <div class="row">
             <div class="col-auto">
-                <a href="@Url.Action("Personal", "Administrador")" class="btn btn-primary btn-sm mb-3">
+                <a href="@Url.Action("Listado", "Personal")" class="btn btn-primary btn-sm mb-3">
                     <i class="fa-solid fa-arrow-left"></i> Regresar
                 </a>
             </div>
@@ -24,11 +24,11 @@
                 </ul>
 
                 <!-- Contenido de las tabs -->
-                <div class="tab-content mt-3"style="position: relative; height: 800px; overflow: hidden; background-color: #f9f9f9;">
+                <div class="tab-content mt-3" style="position: relative; height: 800px; overflow: hidden; background-color: #f9f9f9;">
                     <div class="container">
                         <div class="row">
                             <!-- Información del empleado -->
-                            <div class="col-md-12 tab-pane fade show active" id="informacion-personal"  style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow-y: auto; padding: 20px;">
+                            <div class="col-md-12 tab-pane fade show active" id="informacion-personal" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow-y: auto; padding: 20px;">
                                 <div class="container-form ms-5 mt-4 mx-auto p-4 rounded shadow-lg" style="max-width: 900px; background-color: #f9f9f9;">
                                     <h3 class="text-center mb-4">Información del Empleado</h3>
                                     <div class="row g-3">
@@ -123,8 +123,8 @@
                             <div class="col-md-12 tab-pane fade" id="asignacion-pacientes" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow-y: auto; padding: 20px;">
                                 <div class="container-form ms-5 mt-4 mx-auto p-4 rounded shadow-lg" style="max-width: 900px; background-color: #f9f9f9;">
                                     <h3 class="text-center mb-4">Asignaciones de Pacientes</h3>
-                                    <a href="@Url.Action("AsignarPaciente", "Administrador")" class="btn btn-primary mb-3 col-md-4 col-xl-2">
-                                        <i class="fa-solid fa-plus"></i>
+                                    <a href="@Url.Action("AsignarPaciente", "Personal")" class="btn btn-primary mb-3 col-md-4 col-xl-2">
+                                        <i class="fa-solid fa-plus"></i> Asignar paciente
                                     </a>
                                     <!-- Lista de Asignaciones -->
                                     <div class="list-group">
