@@ -1,22 +1,432 @@
-﻿<div class="row mx-5 rounded bg-light">
-    <!-- First column with image -->
-    <div class="col-2">
-    </div>
-    <div class="col-sm-12 col-md-2 d-flex justify-content-center align-items-center">
-        <img class="img-fluid" src="~/Recursos/img/logos/Logo Boena-01.png" height="200px" width="200px" alt="Alternate Text" />
-    </div>
+﻿<div class="container-fluid">
+    <div class="d-flex bg-white justify-content-around fw-bold">
+        <div class="">
+            <div class="d-flex justify-content-end align-content-center align-items-center">
+                <img src="~/Recursos/img/logos/Logo Boena-01.png" class="img-fluid" height="100px" width="100px" />
 
-    <!-- Second column with text -->
-    <div class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">
-        <div class="text-center">
-            <div class="display-1 mb-2">
+            </div>
+        </div>
+        <div class=" text-center justify-content-center align-content-center align-items-center">
+            <div class="">
+                Böena FisioSpa & Wellness
+            </div>
+            <div class="">
                 Servicio de Spa
             </div>
-            <div class="display-5 fw-semibold">
+            <div class="">
                 Formulario de masaje
             </div>
         </div>
+        <div class="">
+            <img src="~/Recursos/img/logos/logo bouganvillea.png" height="100px" width="100px" />
+        </div>
     </div>
-    <div class="col-2">
-    </div>
+
+    <form>
+        <div class="d-flex justify-content-center bg-primary fw-bold text-light h4 p-2 m-0">
+            Información Personal
+        </div>
+        <div class="d-flex flex-column bg-white p-5">
+            <div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">Nombre</span>
+                    <input type="text" class="form-control border border-1" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+            </div>
+            <div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">Número de Habitación</span>
+                    <input type="text" class="form-control border border-1" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+            </div>
+            <div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">Email</span>
+                    <input type="text" class="form-control border border-1" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center bg-primary fw-bold text-light h4 p-2 m-0">
+            Información para el masaje
+        </div>
+        <div class="d-flex flex-column bg-white p-5">
+            <div class="mb-3">¿Qué tipo de tratamiento desea hoy?</div>
+            <div class="d-flex rounded p-3 border border-1 mb-3" style="background-color: #f8f9fa">
+                <div class="w-25">
+                    Tratamiento
+                </div>
+                <div class="d-flex w-75 justify-content-around">
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input border border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="">Individual</label>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input border border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="">Parejas</label>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex rounded p-3 border border-1  mb-3" style="background-color: #f8f9fa">
+                <div class="w-25">
+                    Presión del masaje
+                </div>
+                <div class="d-flex w-75 justify-content-around">
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input border border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="">Suave</label>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input border border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="">Medio</label>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input border border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="">Fuerte</label>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex rounded p-3 border border-1 mb-3" style="background-color: #f8f9fa">
+                <div class="w-25">
+                    Masaje Boena
+                </div>
+                <div class="d-flex w-75 justify-content-center">
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input border border-dark me-2" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="">$110 (75 minutos)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex rounded p-3 border border-1 mb-3" style="background-color: #f8f9fa">
+                <div class="w-25">
+                    Limpieza Facial
+                </div>
+                <div class="d-flex w-75 justify-content-center">
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input border border-dark me-2" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="">$85</label>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex rounded p-3 border border-1 mb-3" style="background-color: #f8f9fa">
+                <div class="w-25">
+                    Masaje Facial + Facial Orgánico
+                </div>
+                <div class="d-flex w-75 justify-content-center">
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input border border-dark me-2" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="">$120</label>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex rounded p-3 border border-1 mb-3" style="background-color: #f8f9fa">
+                <div class="w-25">
+                    Masaje + Reflexología podal
+                </div>
+                <div class="d-flex w-75 justify-content-center">
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input border border-dark me-2" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="">$120</label>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex rounded p-3 border border-1 mb-3" style="background-color: #f8f9fa">
+                <div class="w-25">
+                    Limpieza facial + masaje de espalda
+                </div>
+                <div class="d-flex w-75 justify-content-center">
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input border border-dark me-2" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="">$120</label>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex rounded p-3 border border-1 mb-3" style="background-color: #f8f9fa">
+                <div class="w-25">
+                    Limpieza facial + reflexología
+                </div>
+                <div class="d-flex w-75 justify-content-center">
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input border border-dark me-2" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="">$120</label>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex rounded p-3 border border-1 mb-3" style="background-color: #f8f9fa">
+                <div class="w-25">
+                    Masaje, limpieza facial, exfoliación y envoltura corporal
+                </div>
+                <div class="d-flex w-75 justify-content-center">
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input border border-dark me-2" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="">$170</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="d-flex justify-content-center bg-primary fw-bold text-light h4 p-2 m-0">
+            Información médica
+        </div>
+        <div class="d-flex flex-column bg-white p-5">
+            <div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">Edad</span>
+                    <input type="text" class="form-control border border-1" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+            </div>
+            <div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text w-25" id="basic-addon3">Está tomando medicamentos?</span>
+                    <div class="d-flex w-75 justify-content-around border border-1">
+                        <div class="d-flex align-items-center">
+                            <input class="form-check-input border border-dark me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="">Sí</label>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <input class="form-check-input border border-dark me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text w-50" id="basic-addon3">Está embarazada? Cuántas semanas? Factores de riesgo?</span>
+                    <div class="d-flex w-50 justify-content-around border border-1">
+                        <div class="d-flex align-items-center">
+                            <input class="form-check-input border border-dark me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="">Sí</label>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <input class="form-check-input border border-dark me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text w-50" id="basic-addon3">Ha tenido usted lesiones ortopédicas?</span>
+                    <div class="d-flex w-50 justify-content-around border border-1">
+                        <div class="d-flex align-items-center">
+                            <input class="form-check-input border border-dark me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="">Sí</label>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <input class="form-check-input border border-dark me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="mb-3 text-start">Por favor indique si alguna de las siguientes enfermedades aplican en usted</div>
+            <div class="">
+                <div class="d-flex justify-content-around">
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <input class="form-check-input border border-dark" type="checkbox" id="Diabetes">
+                            <label class="form-check-label" for="Diabetes">Cáncer</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border border-dark" type="checkbox" id="Hipertension">
+                            <label class="form-check-label" for="Hipertension">Migrañas</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border border-dark" type="checkbox" id="Cardiacos">
+                            <label class="form-check-label" for="Cardiacos">Artritis</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border border-dark" type="checkbox" id="Asma">
+                            <label class="form-check-label" for="Asma">Diabetes</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border border-dark" type="checkbox" id="Asma">
+                            <label class="form-check-label" for="Asma">Esguince</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border border-dark" type="checkbox" id="EnfermedadAutoinmune">
+                            <label class="form-check-label" for="EnfermedadAutoinmune">Dolor crónico</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border border-dark" type="checkbox" id="Otro">
+                            <label class="form-check-label" for="Otro">Cuágulo sanguíneo</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <input class="form-check-input border border-dark" type="checkbox" id="Alergias">
+                            <label class="form-check-label" for="Alergias">Reemplazo articular</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border border-dark" type="checkbox" id="Cancer">
+                            <label class="form-check-label" for="Cancer">Presión Alta/Baja</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border border-dark" type="checkbox" id="Epilepsia">
+                            <label class="form-check-label" for="Epilepsia">Neuropatías</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border border-dark" type="checkbox" id="EnfermedadRenal">
+                            <label class="form-check-label" for="EnfermedadRenal">Fibromialgia renal</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border border-dark" type="checkbox" id="EnfermedadRenal">
+                            <label class="form-check-label" for="EnfermedadRenal">Alergias</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border border-dark" type="checkbox" id="EnfermedadHepatica">
+                            <label class="form-check-label" for="EnfermedadHepatica">Accidente cerebrovascular</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input border border-dark" type="checkbox" id="EnfermedadPulmonar">
+                            <label class="form-check-label" for="EnfermedadPulmonar">Infartos</label>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="mt-2">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text w-50" id="basic-addon3">Ha recibido masaje profesional anteriormente?</span>
+                        <div class="d-flex w-50 justify-content-around border border-1">
+                            <div class="d-flex align-items-center">
+                                <input class="form-check-input border border-dark me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                <label class="">Sí</label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input class="form-check-input border border-dark me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                <label class="">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text w-50" id="basic-addon3">Hay alguna zona donde no desee masaje?</span>
+                        <div class="d-flex w-50 justify-content-around border border-1">
+                            <div class="d-flex align-items-center">
+                                <input class="form-check-input border border-dark me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                <label class="">Sí</label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input class="form-check-input border border-dark me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                <label class="">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 text-start"> <span class="fw-bold">Al firmar a continuación, usted acepta lo siguiente:</span> He completado este formulario en la medida de mis posibilidades y conocimientos y acepto informar a mi terapeuta si alguna de la información anterior cambia en cualquier momento. </div>
+                <div class="row justify-content-around">
+                    <div class="col-md-6 col-sm-12">
+                        <div>Firma del paciente</div>
+                        <canvas id="firmaPaciente"></canvas>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div>Firma del fisioterapeuta</div>
+                        <canvas id="firmaFisioterapeuta"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </form>
+
+
+    @*<div class="d-flex justify-content-end">
+            <button class="btn btn-success btn-sm">
+                <i class="fas fa-print"></i> Imprimir Reporte
+            </button>
+            <button class="btn btn-primary btn-sm ms-1">
+                <i class="fas fa-save"></i> Guardar Cambios
+            </button>
+        </div>*@
+
 </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+<style>
+    #firmaFisioterapeuta, #firmaPaciente {
+        border: 1px solid #000;
+        width: 100%;
+        max-width: 700px;
+        height: 150px;
+    }
+
+    .button-container {
+        margin-top: 10px;
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var canvas = document.getElementById('firmaPaciente');
+        var signaturePad = new SignaturePad(canvas);
+
+        function resizeCanvas() {
+            var ratio = Math.max(window.devicePixelRatio || 1, 1);
+            canvas.width = canvas.offsetWidth * ratio;
+            canvas.height = canvas.offsetHeight * ratio;
+            canvas.getContext('2d').scale(ratio, ratio);
+            signaturePad.clear(); // otherwise isEmpty() might return incorrect value
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        document.getElementById('clear').addEventListener('click', function () {
+            signaturePad.clear();
+        });
+
+        document.getElementById('save').addEventListener('click', function () {
+            if (signaturePad.isEmpty()) {
+                alert("Por favor, firme primero.");
+            } else {
+                var dataURL = signaturePad.toDataURL(); // Devuelve la imagen en formato base64
+                console.log(dataURL);
+                // Muestra la imagen en una nueva ventana o envíala al servidor
+                var nuevaVentana = window.open();
+                nuevaVentana.document.write('<img src="' + dataURL + '"/>');
+            }
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var canvas = document.getElementById('firmaFisioterapeuta');
+        var signaturePad = new SignaturePad(canvas);
+
+        function resizeCanvas() {
+            var ratio = Math.max(window.devicePixelRatio || 1, 1);
+            canvas.width = canvas.offsetWidth * ratio;
+            canvas.height = canvas.offsetHeight * ratio;
+            canvas.getContext('2d').scale(ratio, ratio);
+            signaturePad.clear(); // otherwise isEmpty() might return incorrect value
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        document.getElementById('clear').addEventListener('click', function () {
+            signaturePad.clear();
+        });
+
+        document.getElementById('save').addEventListener('click', function () {
+            if (signaturePad.isEmpty()) {
+                alert("Por favor, firme primero.");
+            } else {
+                var dataURL = signaturePad.toDataURL(); // Devuelve la imagen en formato base64
+                console.log(dataURL);
+                // Muestra la imagen en una nueva ventana o envíala al servidor
+                var nuevaVentana = window.open();
+                nuevaVentana.document.write('<img src="' + dataURL + '"/>');
+            }
+        });
+    });
+</script>

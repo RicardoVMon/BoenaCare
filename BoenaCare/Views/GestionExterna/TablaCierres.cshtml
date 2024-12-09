@@ -1,8 +1,303 @@
 ﻿
-@{
-    ViewBag.Title = "TablaCierres";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
 
-<h2>TablaCierres</h2>
+@*<link href="https://cdn.jsdelivr.net/npm/handsontable@12.1.0/dist/handsontable.full.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>*@
+
+
+<div class="container-fluid">
+    <div class="d-flex bg-white justify-content-around fw-bold">
+        <div class="">
+            <div class="d-flex justify-content-end align-content-center align-items-center">
+                <img src="~/Recursos/img/logos/Logo Boena-01.png" class="img-fluid" height="100px" width="100px" />
+
+            </div>
+        </div>
+        <div class=" text-center justify-content-center align-content-center align-items-center">
+            <div class="">
+                Böena FisioSpa & Wellness
+            </div>
+            <div class="">
+                Reporte de Tratamientos Mensuales Hotel Bougainvillea
+            </div>
+            <div class="">
+                De 1 al 31 de Octubre 2024
+            </div>
+        </div>
+        <div class="">
+            <img src="~/Recursos/img/logos/logo bouganvillea.png" height="100px" width="100px" />
+        </div>
+    </div>
+    
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover text-center" id="elementToCapture">
+            <thead class="table-dark" style="font-size: 15px">
+                <tr class="align-middle">
+                    <th>#</th>
+                    <th>Fecha</th>
+                    <th>TF</th>
+                    <th>Cliente</th>
+                    <th>N° Habitación</th>
+                    <th>Tipo de tratamiento</th>
+                    <th>Modo pago</th>
+                    <th>Voucher</th>
+                    <th>Monto dólares</th>
+                    <th>Tip</th>
+                    <th>Total</th>
+                    <th>T.C. BAC</th>
+                    <th>Conversión colones</th>
+                    <th>Monto colones</th>
+                    <th>Total general colones</th>
+                    <th>Factura electrónica</th>
+                    <th>Comisión HB</th>
+                    <th class="table-success">Saldo</th>
+                    <th class="table-success">Retención 4.5% datáfono</th>
+                    <th class="table-success">Retención 1.76% renta</th>
+                    <th class="table-success">Ganancia final</th>
+                </tr>
+            </thead>
+            <tbody style="font-size: 10px" contenteditable='true'>
+                <tr>
+                    <td>1</td>
+                    <td>09/12/2024</td>
+                    <td>TF001</td>
+                    <td>Juan Pérez</td>
+                    <td>101</td>
+                    <td>Masaje relajante</td>
+                    <td>Tarjeta</td>
+                    <td>123456</td>
+                    <td>100.00</td>
+                    <td>10.00</td>
+                    <td>110.00</td>
+                    <td>600</td>
+                    <td>66,000</td>
+                    <td>66,000</td>
+                    <td>66,000</td>
+                    <td>Sí</td>
+                    <td>5%</td>
+                    <td>60,000</td>
+                    <td>2,970</td>
+                    <td>1,176</td>
+                    <td>55,854</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>10/12/2024</td>
+                    <td>TF002</td>
+                    <td>Ana Gómez</td>
+                    <td>102</td>
+                    <td>Masaje terapéutico</td>
+                    <td>Transferencia</td>
+                    <td>654321</td>
+                    <td>120.00</td>
+                    <td>12.00</td>
+                    <td>132.00</td>
+                    <td>550</td>
+                    <td>69,600</td>
+                    <td>69,600</td>
+                    <td>69,600</td>
+                    <td>No</td>
+                    <td>4%</td>
+                    <td>65,000</td>
+                    <td>3,200</td>
+                    <td>1,250</td>
+                    <td>60,000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>11/12/2024</td>
+                    <td>TF003</td>
+                    <td>Carlos Martínez</td>
+                    <td>103</td>
+                    <td>Masaje antiestrés</td>
+                    <td>Efectivo</td>
+                    <td>987654</td>
+                    <td>90.00</td>
+                    <td>9.00</td>
+                    <td>99.00</td>
+                    <td>570</td>
+                    <td>58,500</td>
+                    <td>58,500</td>
+                    <td>58,500</td>
+                    <td>Sí</td>
+                    <td>6%</td>
+                    <td>55,000</td>
+                    <td>2,800</td>
+                    <td>1,150</td>
+                    <td>52,700</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>12/12/2024</td>
+                    <td>TF004</td>
+                    <td>Laura Rodríguez</td>
+                    <td>104</td>
+                    <td>Masaje deportivo</td>
+                    <td>Tarjeta</td>
+                    <td>112233</td>
+                    <td>150.00</td>
+                    <td>15.00</td>
+                    <td>165.00</td>
+                    <td>590</td>
+                    <td>99,000</td>
+                    <td>99,000</td>
+                    <td>99,000</td>
+                    <td>No</td>
+                    <td>7%</td>
+                    <td>95,000</td>
+                    <td>3,000</td>
+                    <td>1,300</td>
+                    <td>87,500</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>13/12/2024</td>
+                    <td>TF005</td>
+                    <td>Ricardo Gómez</td>
+                    <td>105</td>
+                    <td>Masaje relajante</td>
+                    <td>Efectivo</td>
+                    <td>223344</td>
+                    <td>110.00</td>
+                    <td>11.00</td>
+                    <td>121.00</td>
+                    <td>600</td>
+                    <td>65,000</td>
+                    <td>65,000</td>
+                    <td>65,000</td>
+                    <td>Sí</td>
+                    <td>5%</td>
+                    <td>62,000</td>
+                    <td>3,100</td>
+                    <td>1,200</td>
+                    <td>56,900</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>14/12/2024</td>
+                    <td>TF006</td>
+                    <td>Jorge Pérez</td>
+                    <td>106</td>
+                    <td>Masaje relajante</td>
+                    <td>Tarjeta</td>
+                    <td>334455</td>
+                    <td>130.00</td>
+                    <td>13.00</td>
+                    <td>143.00</td>
+                    <td>620</td>
+                    <td>75,600</td>
+                    <td>75,600</td>
+                    <td>75,600</td>
+                    <td>No</td>
+                    <td>8%</td>
+                    <td>72,000</td>
+                    <td>3,200</td>
+                    <td>1,300</td>
+                    <td>65,500</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>15/12/2024</td>
+                    <td>TF007</td>
+                    <td>María López</td>
+                    <td>107</td>
+                    <td>Masaje terapéutico</td>
+                    <td>Transferencia</td>
+                    <td>445566</td>
+                    <td>140.00</td>
+                    <td>14.00</td>
+                    <td>154.00</td>
+                    <td>630</td>
+                    <td>80,800</td>
+                    <td>80,800</td>
+                    <td>80,800</td>
+                    <td>Sí</td>
+                    <td>5%</td>
+                    <td>75,000</td>
+                    <td>3,300</td>
+                    <td>1,350</td>
+                    <td>69,350</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>16/12/2024</td>
+                    <td>TF008</td>
+                    <td>Pedro González</td>
+                    <td>108</td>
+                    <td>Masaje deportivo</td>
+                    <td>Efectivo</td>
+                    <td>556677</td>
+                    <td>160.00</td>
+                    <td>16.00</td>
+                    <td>176.00</td>
+                    <td>640</td>
+                    <td>85,200</td>
+                    <td>85,200</td>
+                    <td>85,200</td>
+                    <td>No</td>
+                    <td>6%</td>
+                    <td>80,000</td>
+                    <td>3,400</td>
+                    <td>1,400</td>
+                    <td>74,200</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>17/12/2024</td>
+                    <td>TF009</td>
+                    <td>Lucía Pérez</td>
+                    <td>109</td>
+                    <td>Masaje relajante</td>
+                    <td>Tarjeta</td>
+                    <td>667788</td>
+                    <td>150.00</td>
+                    <td>15.00</td>
+                    <td>165.00</td>
+                    <td>650</td>
+                    <td>90,000</td>
+                    <td>90,000</td>
+                    <td>90,000</td>
+                    <td>Sí</td>
+                    <td>7%</td>
+                    <td>85,000</td>
+                    <td>3,500</td>
+                    <td>1,450</td>
+                    <td>78,100</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>18/12/2024</td>
+                    <td>TF010</td>
+                    <td>Mario Romero</td>
+                    <td>110</td>
+                    <td>Masaje antiestrés</td>
+                    <td>Transferencia</td>
+                    <td>778899</td>
+                    <td>110.00</td>
+                    <td>11.00</td>
+                    <td>121.00</td>
+                    <td>660</td>
+                    <td>72,000</td>
+                    <td>72,000</td>
+                    <td>72,000</td>
+                    <td>No</td>
+                    <td>5%</td>
+                    <td>68,000</td>
+                    <td>3,600</td>
+                    <td>1,500</td>
+                    <td>63,800</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="d-flex justify-content-end">
+        <button class="btn btn-success btn-sm">
+            <i class="fas fa-print"></i> Imprimir Reporte
+        </button>
+        <button class="btn btn-primary btn-sm ms-1">
+            <i class="fas fa-save"></i> Guardar Cambios
+        </button>
+    </div>
+
+</div>
 
