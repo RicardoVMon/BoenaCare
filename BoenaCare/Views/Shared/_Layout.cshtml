@@ -6,20 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BoenaCare</title>
-    <!-- Favicon -->
     <link rel="shortcut icon" href="~/Recursos/img/svg/logo.svg" type="image/x-icon">
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="~/Recursos/css/style.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 </head>
 
 <body>
     <div class="layer"></div>
     <!-- ! Body -->
-    <a class="skip-link sr-only" href="#skip-target">Skip to content</a>
     <div class="page-flex">
         <!-- ! Sidebar -->
         <aside class="sidebar">
@@ -35,25 +34,27 @@
                     </a>
                 </div>
                 <div class="sidebar-body">
+                    <ul class="sidebar-body-menu">
+                        <li>
+                            <a class="active" href="@Url.Action("Index", "Home")"><span class="icon home" aria-hidden="true"></span>Inicio</a>
+                        </li>
+                    </ul>
                     <span class="system-menu__title">Personal</span>
                     <ul class="sidebar-body-menu">
                         <li>
-                            <a class="active" href="@Url.Action("Inicio", "Personal")"><span class="icon home" aria-hidden="true"></span>Inicio</a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("ListadoPacientes", "Personal")"><span class="icon user-3" aria-hidden="true"></span>Pacientes</a>
+                            <a href="@Url.Action("Listado", "Paciente")"><span class="icon user-3" aria-hidden="true"></span>Pacientes</a>
                         </li>
                     </ul>
                     <span class="system-menu__title">Administración</span>
                     <ul class="sidebar-body-menu">
                         <li>
-                            <a href="@Url.Action("Dashboard", "Administrador")"><span class="icon edit" aria-hidden="true"></span>Dashboard</a>
+                            <a href="@Url.Action("Dashboard", "Dashboard")"><span class="icon edit" aria-hidden="true"></span>Dashboard</a>
                         </li>
                         <li>
-                            <a href="@Url.Action("Personal", "Administrador")"><span class="icon user-3" aria-hidden="true"></span>Personal</a>
+                            <a href="@Url.Action("Listado", "Personal")"><span class="icon user-3" aria-hidden="true"></span>Personal</a>
                         </li>
                         <li>
-                            <a href="@Url.Action("Auditoria", "Administrador")"><span class="icon folder" aria-hidden="true"></span>Auditoría</a>
+                            <a href="@Url.Action("Auditoria", "Auditoria")"><span class="icon folder" aria-hidden="true"></span>Auditoría</a>
                         </li>
                         <li>
                             <a class="show-cat-btn" href="##">
@@ -63,12 +64,12 @@
                                     <span class="icon arrow-down" aria-hidden="true"></span>
                                 </span>
                             </a>
-                            <ul class="cat-sub-menu">
+                            <ul class="cat-sub-menu ps-3">
                                 <li>
-                                    <a href="users-01.html">Users-01</a>
+                                    <a href="@Url.Action("Formulario", "GestionExterna")">Formulario de Masaje</a>
                                 </li>
                                 <li>
-                                    <a href="users-02.html">Users-02</a>
+                                    <a href="@Url.Action("TablaCierres", "GestionExterna")">Tabla de Cierres</a>
                                 </li>
                             </ul>
                         </li>
@@ -79,7 +80,7 @@
                 <a href="##" class="sidebar-user">
                     <span class="sidebar-user-img">
                         <picture>
-                            <img src="~/Recursos/img/avatar/avatar-illustrated-01.png" alt="User name">
+                            <img src="https://media.istockphoto.com/id/2151669184/vector/vector-flat-illustration-in-grayscale-avatar-user-profile-person-icon-gender-neutral.jpg?s=612x612&w=0&k=20&c=UEa7oHoOL30ynvmJzSCIPrwwopJdfqzBs0q69ezQoM8=" alt="User name">
                         </picture>
                     </span>
                     <div class="sidebar-user-info">
@@ -95,10 +96,10 @@
                 <div class="container main-nav">
 
                     <div class="main-nav-start" style="display: flex">
-                        <div class="search-wrapper">
+                        @*<div class="search-wrapper">
                             <i data-feather="search" aria-hidden="true"></i>
                             <input type="text" placeholder="Busqueda ..." required>
-                        </div>
+                        </div>*@
                     </div>
 
                     <div class="main-nav-end">
@@ -160,7 +161,7 @@
                             <button href="##" class="nav-user-btn dropdown-btn" title="My profile" type="button">
                                 <span class="sr-only">My profile</span>
                                 <span class="nav-user-img">
-                                        <img src="~/Recursos/img/avatar/avatar-illustrated-02.png" alt="User name">
+                                    <img src="https://media.istockphoto.com/id/2151669184/vector/vector-flat-illustration-in-grayscale-avatar-user-profile-person-icon-gender-neutral.jpg?s=612x612&w=0&k=20&c=UEa7oHoOL30ynvmJzSCIPrwwopJdfqzBs0q69ezQoM8=" alt="User name">
                                 </span>
                             </button>
                             <ul class="users-item-dropdown nav-user-dropdown dropdown">
@@ -188,7 +189,7 @@
                 </div>
             </nav>
             <!-- ! Main -->
-            <main class="main users chart-page px-3" id="skip-target">
+            <main class="main users chart-page px-3">
                 @RenderBody()
             </main>
             <!-- ! Footer -->
@@ -217,6 +218,6 @@
     <script src="~/Recursos/js/script.js"></script>
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
