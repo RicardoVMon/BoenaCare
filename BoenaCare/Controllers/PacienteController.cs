@@ -23,7 +23,13 @@ namespace BoenaCare.Controllers
         {
             return View();
         }
+        [HttpGet]
         public ActionResult Archivos()
+        {
+            return View();
+        }
+        [HttpGet]
+        public ActionResult AsistenteIA()
         {
             return View();
         }

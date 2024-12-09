@@ -350,6 +350,7 @@
     <Content Include="Views\GestionExterna\TablaCierres.cshtml" />
     <Content Include="Views\Paciente\Tratamientos.cshtml" />
     <Content Include="Views\Paciente\Archivos.cshtml" />
+    <Content Include="Views\Paciente\AsistenteIA.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
