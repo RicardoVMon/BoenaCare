@@ -153,11 +153,14 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Recursos\css\datepicker.material.css" />
+    <Content Include="Recursos\css\datepicker.minimal.css" />
     <Content Include="Recursos\css\style.css" />
     <Content Include="Recursos\css\style.min.css" />
     <Content Include="Recursos\css\EstilosPersonal.css" />
     <Content Include="Recursos\fonts\demo.html" />
     <Content Include="Recursos\fonts\stylesheet.css" />
+    <Content Include="Recursos\img\cuerpo.png" />
     <Content Include="Recursos\img\logos\Logo Boena-01.png" />
     <Content Include="Recursos\img\logos\Logo Boena-04.png" />
     <Content Include="Recursos\img\logos\Logo Boena-06.png" />
@@ -289,6 +292,7 @@
     <Content Include="Recursos\img\svg\thumbnail.svg" />
     <Content Include="Recursos\js\script.js" />
     <Content Include="Recursos\plugins\chart.min.js" />
+    <Content Include="Recursos\plugins\datepicker.js" />
     <Content Include="Recursos\plugins\feather.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />

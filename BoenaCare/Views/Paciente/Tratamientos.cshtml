@@ -27,7 +27,7 @@
                         <a class="nav-link" href="@Url.Action("Archivos", "Paciente")">Archivos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Asistente IA</a>
+                        <a class="nav-link" href="@Url.Action("AsistenteIA", "Paciente")">Asistente IA</a>
                     </li>
                 </ul>
             </div>
@@ -39,9 +39,13 @@
         </button>
 
         <div class="mt-4">
-            <button class="btn btn-primary">Resumen de Mejoría</button>
-            <button class="btn btn-primary">Resumen de Tratamientos Hechos</button>
+            <!-- Botones que abren los modales -->
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#improvementSummaryModal">Resumen de Mejoría</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#treatmentSummaryModal">Resumen de Tratamientos Hechos</button>
         </div>
+
+
+
 
         <!-- Tratamientos ya existentes -->
         <div class="card mt-4 shadow-sm">
@@ -194,6 +198,48 @@
     </div>
 </div>
 
+<!-- Modal para Resumen de Mejoría -->
+<div class="modal fade" id="improvementSummaryModal" tabindex="-1" aria-labelledby="improvementSummaryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="improvementSummaryModalLabel">Resumen de Mejoría</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Progreso del Paciente:</strong> Según las evaluaciones realizadas, el paciente ha mostrado una mejora notable en la movilidad y una reducción significativa del dolor.</p>
+                <p>Se recomienda continuar con el tratamiento actual y realizar sesiones de evaluación periódica para ajustar según sea necesario.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Resumen de Tratamientos Hechos -->
+<div class="modal fade" id="treatmentSummaryModal" tabindex="-1" aria-labelledby="treatmentSummaryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="treatmentSummaryModalLabel">Resumen de Tratamientos Hechos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Tratamientos realizados:</strong></p>
+                <ul>
+                    <li>Terapia manual y ejercicios de fortalecimiento de la región lumbar.</li>
+                    <li>Masajes terapéuticos para reducir tensión muscular.</li>
+                    <li>Ejercicios guiados para mejorar postura y flexibilidad.</li>
+                </ul>
+                <p>En total, se han realizado <strong>6 sesiones</strong> con buenos resultados.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
     $(document).ready(function () {
         $("#tablaTratamientos").DataTable({

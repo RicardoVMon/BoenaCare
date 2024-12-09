@@ -1,8 +1,109 @@
-﻿
-@{
-    ViewBag.Title = "AsistenteIA";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿<style>
+    .card-img-top {
+        width: 100%; /* Ensures the image stretches to fill the width */
+        height: 200px; /* Fixed height for consistency */
+        object-fit: cover; /* Makes the image cover the area without distortion */
+    }
+</style>
 
-<h2>AsistenteIA</h2>
+<div class="row px-5">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-auto">
+                <a href="@Url.Action("Listado", "Paciente")" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-arrow-left"></i> Regresar
+                </a>
+            </div>
+        </div>
+        <div class="row pt-3 pb-3">
+            <div class="col-12">
+                <div class="display-3" style="font-size: 2.5rem;">Paciente: Juan Pérez</div>
+            </div>
+        </div>
 
+        <!--barra tabs-->
+        <div class="row mt-2">
+            <div class="col-12">
+                <ul class="nav nav-tabs nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("FichaClinica", "Paciente")">Ficha Clínica</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Tratamientos", "Paciente")">Tratamientos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Archivos", "Paciente")">Archivos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="@Url.Action("AsistenteIA", "Paciente")">Asistente IA</a>
+                    </li>
+                </ul>
+
+                <!-- Your cards with images -->
+                <div class="container-fluid mt-4 bg-white">
+                    <div class="row">
+                        <!-- Saved Section -->
+                        <div class="col-4" id="saved-section">
+                            <div class="d-flex flex-column justify-content-around border-end h-100">
+                                <h5 class="p-3 border-bottom text-center">Mensajes guardados</h5>
+                                <div class="overflow-auto" style="max-height: 70vh;">
+                                    <ul class="list-group list-group-flush">
+                                        <!-- Sample saved messages -->
+                                        <li class="list-group-item">Mensaje Guardado 1</li>
+                                        <li class="list-group-item">Mensaje Guardado 2</li>
+                                        <li class="list-group-item">Mensaje Guardado 3</li>
+                                        <li class="list-group-item">Mensaje Guardado 4</li>
+                                        <li class="list-group-item">Mensaje Guardado 5</li>
+
+                                        <!-- Add as many as needed; this will make the section scrollable -->
+                                    </ul>
+                                </div>
+                                <button id="multi" class="btn btn-primary w-100 my-2 text-center">Seleccione el plazo de tiempo a analizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Chat Section -->
+                        <div class="col-8" id="chat-section">
+                            <div class="d-flex flex-column h-100">
+                                <!-- Blank Space -->
+                                <div id="blank-space" class="flex-grow-1 d-flex align-items-center justify-content-center border-bottom">
+                                    <p class="text-muted">Empieza una conversación...</p>
+                                </div>
+                                <!-- Text Input Section -->
+                                <div id="text-input" class="p-3">
+                                    <form class="d-flex">
+                                        <input type="text" class="form-control me-2" placeholder="Escribe tu mensaje..." />
+                                        <button type="button" class="btn btn-primary">
+                                            <i class="fa-solid fa-paper-plane"></i> Send
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    /* Ensure saved section is scrollable while maintaining its height */
+    #saved-section .overflow-auto {
+        height: calc(100vh - 50px); /* Adjust this value for the desired height */
+    }
+
+    /* Style for chat blank space */
+    #blank-space {
+        height: calc(100vh - 250px); /* Adjust this value for the desired height */
+    }
+</style>
+
+<link rel="stylesheet" href="~/Recursos/css/datepicker.material.css">
+<script src="~/Recursos/plugins/datepicker.js"></script>
+<script>
+    var multi = new Datepicker('#multi', {
+        multiple: true
+    });
+</script>
