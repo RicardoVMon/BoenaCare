@@ -1,0 +1,117 @@
+﻿<style>
+    .card-img-top {
+        width: 100%; /* Ensures the image stretches to fill the width */
+        height: 200px; /* Fixed height for consistency */
+        object-fit: cover; /* Makes the image cover the area without distortion */
+    }
+</style>
+
+<div class="row px-5">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-auto">
+                <a href="@Url.Action("Listado", "Personal")" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-arrow-left"></i> Regresar
+                </a>
+            </div>
+        </div>
+        <div class="row pt-3 pb-3">
+            <div class="col-12">
+                <div class="display-3" style="font-size: 2.5rem;">Fisioterapeuta: Ignasio Miranda</div>
+            </div>
+        </div>
+
+        <!-- Barra tabs -->
+        <div class="row mt-2">
+            <div class="col-12">
+                <ul class="nav nav-tabs nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Gestion", "Personal")">Información General</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("VistaAsignacionPersonal", "Personal")">Asignaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("AsignarAccesos", "Personal")">Permisos</a>
+                    </li>
+                </ul>
+
+                <!-- Your cards with images -->
+                <div class="container-fluid mt-4">
+                    <div class="row">
+                        <!-- Chat Section -->
+                        <div class="col-12">
+                            <!-- Blank Space -->
+                            <div class="card shadow-lg mt-4 p-4" style="background-color: #f9f9f9; border-left: 5px solid #0d6efd; border-radius: 10px;">
+                                <a href="@Url.Action("AsignarPaciente", "Personal")" class="btn btn-primary mb-3 col-md-4 col-xl-2">
+                                    <i class="fa-solid fa-plus"></i> Asignar paciente
+                                </a>
+
+                                <h3 class="text-center mb-4">Asignaciones de Pacientes</h3>
+
+                                <!-- Lista de Asignaciones -->
+                                <div class="list-group">
+                                    <!-- Paciente -->
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <p><strong>Paciente:</strong> Juan Pérez</p>
+                                            <p><strong>Estado:</strong> Asignado</p>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-warning btn-sm" id="editarAsignacion1">Editar</button>
+                                            <button class="btn btn-danger btn-sm" id="eliminarAsignacion1">Eliminar</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Paciente -->
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <p><strong>Paciente:</strong> Maria Gómez</p>
+                                            <p><strong>Estado:</strong> Asignado</p>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-warning btn-sm" id="editarAsignacion2">Editar</button>
+                                            <button class="btn btn-danger btn-sm" id="eliminarAsignacion2">Eliminar</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Paciente -->
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <p><strong>Paciente:</strong> Carlos Soto</p>
+                                            <p><strong>Estado:</strong> Asignado</p>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-warning btn-sm" id="editarAsignacion3">Editar</button>
+                                            <button class="btn btn-danger btn-sm" id="eliminarAsignacion3">Eliminar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Ensure saved section is scrollable while maintaining its height */
+    #saved-section .overflow-auto {
+        height: calc(100vh - 50px); /* Adjust this value for the desired height */
+    }
+
+    /* Style for chat blank space */
+    #blank-space {
+        height: calc(100vh - 250px); /* Adjust this value for the desired height */
+    }
+</style>
+
+<link rel="stylesheet" href="~/Recursos/css/datepicker.material.css">
+<script src="~/Recursos/plugins/datepicker.js"></script>
+<script>
+    var multi = new Datepicker('#multi', {
+        multiple: true
+    });
+</script>

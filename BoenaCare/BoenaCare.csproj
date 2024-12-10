@@ -356,6 +356,8 @@
     <Content Include="Views\Paciente\Tratamientos.cshtml" />
     <Content Include="Views\Paciente\Archivos.cshtml" />
     <Content Include="Views\Paciente\AsistenteIA.cshtml" />
+    <Content Include="Views\Personal\AsignarAccesos.cshtml" />
+    <Content Include="Views\Personal\VistaAsignacionPersonal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

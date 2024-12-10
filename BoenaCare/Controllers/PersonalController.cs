@@ -37,5 +37,16 @@ namespace BoenaCare.Controllers
             return View();
         }
 
+
+        public ActionResult AsignarAccesos()
+        {
+            return View();
+
+        }
+        public ActionResult VistaAsignacionPersonal()
+        {
+            return View();
+
+        }
     }
 }

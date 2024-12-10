@@ -1,0 +1,122 @@
+﻿<style>
+    .card-img-top {
+        width: 100%; /* Ensures the image stretches to fill the width */
+        height: 200px; /* Fixed height for consistency */
+        object-fit: cover; /* Makes the image cover the area without distortion */
+    }
+</style>
+
+<div class="row px-5">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-auto">
+                <a href="@Url.Action("Listado", "Personal")" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-arrow-left"></i> Regresar
+                </a>
+            </div>
+        </div>
+        <div class="row pt-3 pb-3">
+            <div class="col-12">
+                <div class="display-3" style="font-size: 2.5rem;">Fisioterapeuta: Ignasio Miranda</div>
+            </div>
+        </div>
+
+        <!-- Barra tabs -->
+        <div class="row mt-2">
+            <div class="col-12">
+                <ul class="nav nav-tabs nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Gestion", "Personal")">Información General</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("VistaAsignacionPersonal", "Personal")">Asignaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("AsignarAccesos", "Personal")">Permisos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Permisos -->
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-lg mt-4 p-4" style="background-color: #f9f9f9; border-left: 5px solid #0d6efd; border-radius: 10px;">
+                        <h3 class="text-center mb-4">Permisos de Acceso</h3>
+
+                        <div class="row g-3">
+                            <!-- Permiso: Acceso a Archivos -->
+                            <div class="col-md">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="permisoArchivos" checked>
+                                    <label class="form-check-label" for="permisoArchivos">
+                                        Acceso a Archivos
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Permiso: Acceso a Pacientes -->
+                            <div class="col-md">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="permisoPacientes" checked>
+                                    <label class="form-check-label" for="permisoPacientes">
+                                        Acceso a Pacientes
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Permiso: Configuración del Sistema -->
+                            <div class="col-md">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="permisoConfiguracion">
+                                    <label class="form-check-label" for="permisoConfiguracion">
+                                        Configuración del Sistema
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Permiso: Configuración del Sistema -->
+                            <div class="col-md">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="permisoConfiguracion">
+                                    <label class="form-check-label" for="permisoConfiguracion">
+                                        Otros
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón de Guardar Permisos -->
+                        <div class="row g-2 mt-4 justify-content-center">
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-primary btn-md" id="guardarPermisos">Guardar Permisos</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Ensure saved section is scrollable while maintaining its height */
+    #saved-section .overflow-auto {
+        height: calc(100vh - 50px); /* Adjust this value for the desired height */
+    }
+
+    /* Style for chat blank space */
+    #blank-space {
+        height: calc(100vh - 250px); /* Adjust this value for the desired height */
+    }
+</style>
+
+<link rel="stylesheet" href="~/Recursos/css/datepicker.material.css">
+<script src="~/Recursos/plugins/datepicker.js"></script>
+<script>
+    var multi = new Datepicker('#multi', {
+        multiple: true
+    });
+</script>
