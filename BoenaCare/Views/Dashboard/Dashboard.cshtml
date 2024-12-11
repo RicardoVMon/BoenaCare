@@ -1,64 +1,291 @@
-﻿<!-- Inicio de seccion de contenido -->
-<div class="row">
-    <!-- Selección de información -->
-    <div class="col-4">
-        <a href="" style="text-decoration: none; color: inherit;">
-            <div class="card">
-                <div class="card-header p-1">
-                    <div class="d-flex">
-                        <img class="rounded-top" src="https://online.hbs.edu/Style%20Library/api/resize.aspx?imgpath=/online/PublishingImages/blog/health-care-economics.jpg&w=1200&h=630" width="100%" height="50px" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="card-body pt-3">
-                    <div class="d-flex justify-content-start">
-                        <div class="container w-100 px-0 mx-0">
-                            <h4 class="mb-0">Clínica</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div>
+﻿<div class="row px-5">
+    <div class="col-12">
 
-    <div class="col-4">
-        <a href="" style="text-decoration: none; color: inherit;">
-            <div class="card">
-                <div class="card-header p-1">
-                    <div class="d-flex">
-                        <img class="rounded-top" src="https://spring2innovation.com/wp-content/uploads/2021/05/Who-Are-Your-Users_-A-Deeper-Look-at-Personas-Blog-Header.jpg" width="100%" height="50px" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="card-body pt-3">
-                    <a href="#" style="text-decoration: none; color: inherit;">
-                        <div class="d-flex justify-content-between">
-                            <div class="container w-100 px-0 mx-0">
-                                <h4 class="mb-0">Pacientes</h4>
+        <!-- Subtítulo de Resúmenes (después del título Dashboard) -->
+        <div class="col-6 mb-3">
+            <div class="display-3 px-0 mb-3">Dashboard</div>
+            <h4 class="text-muted mb-3">Resúmenes</h4>
+            <div class="text-muted px-0">Seleccione una de las siguientes opciones para visualizar un resumen de la actividad mensual.</div>
+        </div>
+        <!-- Sección de Resúmenes y Acceso rápido en la misma fila -->
+        <div class="row">
+            <!-- Columna de Resúmenes (más grande) -->
+            <div class="col-12 col-md-9">
+                <!-- Carrusel -->
+                <div id="carouselResumenes" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" style="width: 70%; margin: 0 auto;">
+                        <!-- Card Clínica -->
+                        <div class="carousel-item active">
+                            <div class="card">
+                                <div class="card-header p-1">
+                                    <div class="d-flex">
+                                        <img class="rounded-top" src="https://online.hbs.edu/Style%20Library/api/resize.aspx?imgpath=/online/PublishingImages/blog/health-care-economics.jpg&w=1200&h=630" width="100%" height="270px" style="object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="card-body pt-3">
+                                    <h4 class="mb-0 d-inline-block">Clínica</h4>
+                                    <button class="btn btn-primary btn-sm float-end" data-bs-toggle="modal" data-bs-target="#clinicaResumenModal">
+                                        Ver Resumen
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <div class="col-4">
-        <a href="" style="text-decoration: none; color: inherit;">
-            <div class="card">
-                <div class="card-header p-1">
-                    <div class="d-flex">
-                        <img class="rounded-top w-100" src="https://www.bizlibrary.com/wp-content/uploads/2019/05/30141657/employeeretention.png" height="50px" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="card-body pt-3">
-                    <a href="#" style="text-decoration: none; color: inherit;">
-                        <div class="d-flex justify-content-between">
-                            <div class="container w-100 px-0 mx-0">
-                                <h4 class="mb-0">Empleados</h4>
+                        <!-- Card Pacientes -->
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="card-header p-1">
+                                    <div class="d-flex">
+                                        <img class="rounded-top" src="https://spring2innovation.com/wp-content/uploads/2021/05/Who-Are-Your-Users_-A-Deeper-Look-at-Personas-Blog-Header.jpg" width="100%" height="270px" style="object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="card-body pt-3">
+                                    <h4 class="mb-0 d-inline-block">Pacientes</h4>
+                                    <button class="btn btn-primary btn-sm float-end" data-bs-toggle="modal" data-bs-target="#pacientesModal">
+                                        Ver Resumen
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </a>
+                        <!-- Card Empleados -->
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="card-header p-1">
+                                    <div class="d-flex">
+                                        <img class="rounded-top" src="https://www.bizlibrary.com/wp-content/uploads/2019/05/30141657/employeeretention.png" width="100%" height="270px" style="object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="card-body pt-3">
+                                    <h4 class="mb-0 d-inline-block">Empleados</h4>
+                                    <button class="btn btn-primary btn-sm float-end" data-bs-toggle="modal" data-bs-target="#empleadosModal">
+                                        Ver Resumen
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card Gestión Externa -->
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="card-header p-1">
+                                    <div class="d-flex">
+                                        <img class="rounded-top" src="https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="100%" height="270px" style="object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="card-body pt-3">
+                                    <h4 class="mb-0 d-inline-block">Gestión Externa</h4>
+                                    <button class="btn btn-primary btn-sm float-end" data-bs-toggle="modal" data-bs-target="#gestionExternaModal">
+                                        Ver Resumen
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Controles de navegación del carrusel -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselResumenes" data-bs-slide="prev" style="color: blue;">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselResumenes" data-bs-slide="next" style="color: blue;">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
-        </a>
+
+            <!-- Acceso Rápido  -->
+            <div class="col-12 col-md-3">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between py-3 bg-primary text-white">
+                        <h5 class="mb-0">Acceso rápido</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-muted mb-3">Seleccione un módulo para dirigirse:</div>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <a href="@Url.Action("Listado", "Paciente")" class="btn btn-outline-primary w-100">
+                                    Pacientes
+                                </a>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <a href="@Url.Action("Listado", "Personal")" class="btn btn-outline-primary w-100">
+                                    Personal
+                                </a>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <a href="@Url.Action("Auditoria", "Auditoria")" class="btn btn-outline-primary w-100">
+                                    Auditoría
+                                </a>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <a href="@Url.Action("TablaCierres", "GestionExterna")" class="btn btn-outline-primary w-100">
+                                    Gestión Externa
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
+
+<!-- Modal para Resumen de la Clínica -->
+<div class="modal fade" id="clinicaResumenModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="clinicaResumenModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title text-white" id="clinicaResumenModalLabel">Resumen de la Clínica</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Resumen de la Clínica -->
+                <div class="mb-3">
+                    <label class="text-muted h6">Total de Empleados Activos:</label>
+                    <p>7</p>
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted h6">Total de Pacientes en el Mes:</label>
+                    <p>20</p>
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted h6">Total de Tratamientos Realizados:</label>
+                    <p>32</p>
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted h6">Total Monto Recaudado en el Mes:</label>
+                    <p>$45,000</p>
+                </div>
+
+                <hr class="my-4">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal para Resumen de Pacientes -->
+<div class="modal fade" id="pacientesModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="pacientesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title text-white" id="pacientesModalLabel">Resumen de Pacientes</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Resumen de Pacientes -->
+                <div class="mb-3">
+                    <label class="text-muted h6">Total de Pacientes Registrados:</label>
+                    <p>46</p>
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted h6">Total de Pacientes en el Mes:</label>
+                    <p>20</p>
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted h6">Total Generado en el Mes por Tratamientos:</label>
+                    <p>$45,000</p>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Reporte -->
+                <div class="mb-3">
+                    <label class="text-muted h6">Descripción del Reporte:</label>
+                    <p>Para más detalles genere el reporte de actividad de los pacientes que incluye nombre del paciente, fecha de atención, monto cobrado, método de pago, y si se emitió factura. Además, muestra el total de ingresos del mes, sumando el monto cobrado de cada paciente.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Generar Reporte</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Resumen de Empleados -->
+<div class="modal fade" id="empleadosModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="empleadosModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title text-white" id="empleadosModalLabel">Resumen de Empleados</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Resumen de Empleados -->
+                <div class="mb-3">
+                    <label class="text-muted h6">Total de Empleados Registrados:</label>
+                    <p>10</p>
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted h6">Total de Empleados Activos:</label>
+                    <p>7</p>
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted h6">Total de Empleados Contratados en el Mes:</label>
+                    <p>1</p>
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted h6">Total de Empleados Salientes en el Mes:</label>
+                    <p>3</p>
+                </div>
+
+
+                <hr class="my-4">
+
+                <!-- Reporte -->
+                <div class="mb-3">
+                    <label class="text-muted h6">Reporte:</label>
+                    <p>Para más detalles genere el reporte de actividad de los empleados que incluye los empleados contratados, salientes y los pacientes atendidos, tratamientos realizados y fechas de estos por cada empleado que estuvo activo durante el mes.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Generar Reporte</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Resumen de Gestión Externa -->
+<div class="modal fade" id="gestionExternaModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="gestionExternaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title text-white" id="gestionExternaModalLabel">Resumen de Gestión Externa</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Resumen de Gestión Externa -->
+                <div class="mb-3">
+                    <label class="text-muted h6">Total Clientes Atendidos:</label>
+                    <p>10</p>
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted h6">Total de Sesiones Realizadas:</label>
+                    <p>10</p>
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted h6">Total Monto Recaudado en Dólares:</label>
+                    <p>$5,000</p>
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted h6">Total Monto Recaudado en Colones:</label>
+                    <p>₡252,100</p>
+                </div>
+
+                <hr class="my-4">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

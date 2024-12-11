@@ -59,7 +59,7 @@
                                         </div>
                                         <div>
                                             <button class="btn btn-warning btn-sm" id="editarAsignacion1">Editar</button>
-                                            <button class="btn btn-danger btn-sm" id="eliminarAsignacion1">Eliminar</button>
+                                            <button class="btn btn-danger btn-sm" id="eliminarAsignacion1" data-bs-toggle="modal" data-bs-target="#EliminacionModal">Eliminar</button>
                                         </div>
                                     </div>
 
@@ -91,6 +91,29 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Eliminación -->
+<div class="modal fade" id="EliminacionModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="confirmarEliminacionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title text-white" id="confirmarEliminacionModalLabel">Confirmar Eliminación</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <p>¿Está seguro de que desea realizar esta acción? Ingrese su contraseña para confirmar.</p>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-danger" id="confirmarEliminarBtn">Confirmar</button>
             </div>
         </div>
     </div>
