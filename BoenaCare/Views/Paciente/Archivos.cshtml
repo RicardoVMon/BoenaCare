@@ -1,0 +1,97 @@
+﻿<style>
+    .card-img-top {
+        width: 100%; /* Ensures the image stretches to fill the width */
+        height: 200px; /* Fixed height for consistency */
+        object-fit: cover; /* Makes the image cover the area without distortion */
+    }
+</style>
+
+<div class="row px-5">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-auto">
+                <a href="@Url.Action("Listado", "Paciente")" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-arrow-left"></i> Regresar
+                </a>
+            </div>
+        </div>
+        <div class="row pt-3 pb-3">
+            <div class="col-12">
+                <div class="display-3" style="font-size: 2.5rem;">Paciente: Juan Pérez</div>
+            </div>
+        </div>
+
+        <!--barra tabs-->
+        <div class="row mt-2">
+            <div class="col-12">
+                <ul class="nav nav-tabs nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("FichaClinica", "Paciente")">Ficha Clínica</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Tratamientos", "Paciente")">Tratamientos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="@Url.Action("Archivos", "Paciente")">Archivos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("AsistenteIA", "Paciente")">Asistente IA</a>
+                    </li>
+                </ul>
+
+                <!-- Your cards with images -->
+                <div class="row mt-4">
+                    <div class="col-md-3 col-sm-12">
+                        <a href="https://medlineplus.gov/images/Xray_share.jpg" data-fancybox="gallery" class="card card-hover w-100">
+                            <img src="https://medlineplus.gov/images/Xray_share.jpg" class="card-img-top" alt="...">
+                            <div class="card-body ">
+                                <h5 class="card-title">Título</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Tipo de Documento</h6>
+                                <p class="card-text lh-base"> <span class="fw-bold">Sesión asociada:</span> Tratamiento del 24-12-2024</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <a href="https://siortho.com/wp-content/uploads/2022/12/shutterstock_1716091282-scaled.jpg" data-fancybox="gallery" class="card card-hover w-100">
+                            <img src="https://siortho.com/wp-content/uploads/2022/12/shutterstock_1716091282-scaled.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Título</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Tipo de Documento</h6>
+                                <p class="card-text lh-base"> <span class="fw-bold">Sesión asociada:</span> Tratamiento del 24-12-2024</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <a href="https://example.com/sample.pdf" data-fancybox="gallery" data-type="iframe" class="card card-hover w-100">
+                            <img src="https://cdn-icons-png.flaticon.com/512/7670/7670113.png" class="card-img-top" alt="PDF Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title">PDF Document</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Tipo de Documento</h6>
+                                <p class="card-text lh-base"><span class="fw-bold">Sesión asociada:</span> No se ha relacionado a ninguna sesión</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <!-- -------------------termina archivos------------------ -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="~/Recursos/css/EstilosPersonal.css">
+
+<script>
+    $(document).ready(function () {
+        // Fancybox configuration
+        $('[data-fancybox="gallery"]').fancybox({
+            buttons: [
+                "zoom", "slideShow", "share", "fullScreen", "close"
+            ],
+            transitionEffect: "fade", // Smooth fade transition
+            protect: true // Prevent image drag
+        });
+    });
+</script>

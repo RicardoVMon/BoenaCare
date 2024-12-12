@@ -1,0 +1,211 @@
+﻿<div class="row px-5">
+    <div class="col-12 px-0">
+        <div class="row mx-1 mb-4">
+            <div class="col-auto">
+                <a href="@Url.Action("Listado", "Paciente")" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-arrow-left"></i> Regresar
+                </a>
+            </div>
+        </div>
+        <!-- Page Header -->
+        <div class="row mx-1 mb-4">
+            <div class="display-3 px-0 col-12">Ingreso de Paciente</div>
+            <div class="text-muted px-0">Rellene el formulario para ingresar un nuevo paciente a la clínica</div>
+        </div>
+
+        <!-- Progress Bar -->
+        <!--<div class="progress mb-4">
+        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Paso 1 de 4</div>
+    </div>-->
+        <!-- Form Container -->
+        <div class="mt-4 p-5 rounded shadow-lg" style="background-color: #f9f9f9; border-left: 5px solid #0d6efd;">
+            <form>
+                <!-- Section: Datos Personales -->
+                <h5 class="text-primary mt-4">Datos personales</h5>
+                <hr>
+                <div class="row g-3 mt-2">
+                    <!-- Cédula -->
+                    <div class="col-md-12">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="PacienteCedula" placeholder="Cédula" required>
+                            <label for="PacienteCedula"><i class="bi bi-person"></i> Cédula</label>
+                            <div class="invalid-feedback">Ingrese la cédula del paciente.</div>
+                        </div>
+                    </div>
+                    <!-- Nombre -->
+                    <div class="col-md-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="PacienteNombre" placeholder="Nombre" required>
+                            <label for="PacienteNombre"><i class="bi bi-person-fill"></i> Nombre</label>
+                            <div class="invalid-feedback">Ingrese el nombre del paciente.</div>
+                        </div>
+                    </div>
+                    <!-- Apellido Paterno -->
+                    <div class="col-md-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="PacienteApellidoPaterno" placeholder="Apellido Paterno" required>
+                            <label for="PacienteApellidoPaterno">Apellido Paterno</label>
+                            <div class="invalid-feedback">Ingrese el apellido paterno.</div>
+                        </div>
+                    </div>
+                    <!-- Apellido Materno -->
+                    <div class="col-md-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="PacienteApellidoMaterno" placeholder="Apellido Materno" required>
+                            <label for="PacienteApellidoMaterno">Apellido Materno</label>
+                            <div class="invalid-feedback">Ingrese el apellido materno.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Información de Contacto-->
+                <h5 class="text-primary mt-4">Información de contacto</h5>
+                <hr>
+                <div class="row g-3 mt-2">
+                    <!-- Correo Electrónico -->
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="PacienteCorreo" placeholder="Correo Electrónico" required>
+                            <label for="PacienteCorreo"><i class="bi bi-envelope"></i> Correo Electrónico</label>
+                            <div class="invalid-feedback">Ingrese el correo electrónico del paciente.</div>
+                        </div>
+                    </div>
+                    <!-- Teléfono -->
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="tel" class="form-control" id="PacienteTelefono" placeholder="Teléfono" required>
+                            <label for="PacienteTelefono"><i class="bi bi-telephone"></i> Teléfono</label>
+                            <div class="invalid-feedback">Ingrese el teléfono del paciente.</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Section: Historial Médico -->
+                <h5 class="text-primary mt-4">Historial Médico</h5>
+                <hr>
+                <div class="row">
+                    <!-- Antecedentes Patológicos -->
+                    <div class="col-md-12">
+                        <h6>Antecedentes Patológicos</h6>
+                        <div class="row mt-2">
+                            <div class="col-md-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="Diabetes">
+                                    <label class="form-check-label" for="Diabetes">Diabetes</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="Hipertension">
+                                    <label class="form-check-label" for="Hipertension">Hipertensión</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="Cardiacos">
+                                    <label class="form-check-label" for="Cardiacos">Problemas cardíacos</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="Asma">
+                                    <label class="form-check-label" for="Asma">Asma</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="Alergias">
+                                    <label class="form-check-label" for="Alergias">Alergias</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="Cancer">
+                                    <label class="form-check-label" for="Cancer">Cáncer</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="Epilepsia">
+                                    <label class="form-check-label" for="Epilepsia">Epilepsia</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="EnfermedadRenal">
+                                    <label class="form-check-label" for="EnfermedadRenal">Enfermedad renal</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="EnfermedadHepatica">
+                                    <label class="form-check-label" for="EnfermedadHepatica">Enfermedad hepática</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="EnfermedadPulmonar">
+                                    <label class="form-check-label" for="EnfermedadPulmonar">Enfermedad pulmonar</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="EnfermedadAutoinmune">
+                                    <label class="form-check-label" for="EnfermedadAutoinmune">Enfermedad autoinmune</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="Otro">
+                                    <label class="form-check-label" for="Otro">Otro</label>
+                                </div>
+                            </div>
+                            @*<div class="col-6">
+                                <textarea class="form-control mt-2" id="AntecedentesOtros" placeholder="Especifique si eligió 'Otro'"></textarea>
+                            </div>*@
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-4">
+                        <h6>Antecedentes Personales</h6>
+                        <div class="row mt-2">
+                            <div class="col-12">
+                                <textarea class="form-control mt-2" id="AntecedentesPersonales" placeholder="Indique los antecedentes personales del paciente" rows="6"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lifestyle Section in Accordion -->
+                <h5 class="text-primary mt-4">Estilo de Vida</h5>
+                <hr>
+                <div class="row g-3 mt-2">
+                    <!-- Hace ejercicio -->
+                    <div class="col-md-6">
+                        <div class="input-group h-100">
+                            <span class="input-group-text" id="basic-addon1">¿Hace Ejercicio Regularmente?</span>
+                            <select class="form-control">
+                                <option selected disabled>Seleccione una opción</option>
+                                <option value="value">Sí</option>
+                                <option value="value">No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Cantidad de agua -->
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <label class="form-label">Cantidad de Agua (litros por día)</label>
+                            <div class="d-flex align-items-center w-100">
+                                <input type="range" class="form-range w-100" min="0" max="5" step="0.5" oninput="this.nextElementSibling.value = this.value">
+                                <output class="ms-2">2.5</output>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Foto de perfil -->
+                <div class="row g-3 mt-3">
+                    <div class="col-12">
+                        <label for="PacienteFoto" class="form-label">Foto de Perfil</label>
+                        <input type="file" class="form-control" id="PacienteFoto" accept="image/*">
+                    </div>
+                </div>
+
+
+                <!-- Submit Button -->
+                <div class="row g-2 mt-4">
+                    <div class="col-md-12 text-end">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-save"></i> Guardar Paciente
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

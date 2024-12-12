@@ -1,0 +1,61 @@
+﻿<div class="row px-5">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-6">
+                <div class="display-3 px-0">Auditoría</div>
+                <div class="text-muted px-0 ">Personal</div>
+            </div>
+        </div>
+        <div class="row mt-3 mb-2"></div>
+        <div class="row">
+            <div class="col-12 px-0">
+                <div class="table-responsive shadow-lg" style="background-color: #f9f9f9; border-left: 5px solid #0d6efd; border-radius: 10px;">
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Operación</th>
+                                <th>Campo Modificado</th>
+                                <th>Fisioterapeuta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>11/09/2024 11:02:11</td>
+                                <td>Actualizar</td>
+                                <td>'Dirección'</td>
+                                <td>Ignasio Miranda</td>
+                            </tr>
+                            <tr>
+                                <td>11/12/2024 13:26:38</td>
+                                <td>Actualizar</td>
+                                <td>'Contraseña'</td>
+                                <td>Graciela Ulate</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $("#example").DataTable({
+            language: {
+                url: '//cdn.datatables.net/plug-ins/2.1.8/i18n/es-ES.json',
+            },
+            responsive: true,
+            columnDefs: [
+                {
+                    targets: [3],
+                    className: 'text-center'
+                }
+            ]
+        });
+
+    });
+</script>

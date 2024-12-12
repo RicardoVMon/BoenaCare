@@ -65,21 +65,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })();
 
-  (function () {
-    var showCatBtns = document.querySelectorAll('.show-cat-btn');
+    (function () {
+        var showCatBtns = document.querySelectorAll('.show-cat-btn');
 
-    if (showCatBtns) {
-      showCatBtns.forEach(function (showCatBtn) {
-        var catSubMenu = showCatBtn.nextElementSibling;
-        showCatBtn.addEventListener('click', function (e) {
-          e.preventDefault();
-          catSubMenu.classList.toggle('visible');
-          var catBtnToRotate = document.querySelector('.category__btn');
-          catBtnToRotate.classList.toggle('rotated');
-        });
-      });
-    }
-  })();
+        if (showCatBtns) {
+            showCatBtns.forEach(function (showCatBtn) {
+                var catSubMenu = showCatBtn.nextElementSibling;
+                var catBtnToRotate = showCatBtn.querySelector('.category__btn'); // Target the button inside the clicked element
+
+                showCatBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    catSubMenu.classList.toggle('visible');
+                    catBtnToRotate.classList.toggle('rotated'); // Rotate only the clicked dropdown arrow
+                });
+            });
+        }
+    })();
+
 
   (function () {
     var showMenu = document.querySelector('.lang-switcher');

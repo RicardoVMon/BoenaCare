@@ -1,0 +1,152 @@
+﻿<div class="row px-5">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-auto">
+                <a href="@Url.Action("Listado", "Paciente")" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-arrow-left"></i> Regresar
+                </a>
+            </div>
+        </div>
+        <div class="row pt-3 pb-3">
+            <div class="col-12">
+                <div class="display-3" style="font-size: 2.5rem;">Paciente: Juan Pérez</div>
+            </div>
+        </div>
+
+        <!--barra tabs-->
+        <div class="row mt-2">
+            <div class="col-12">
+                <ul class="nav nav-tabs nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="@Url.Action("FichaClinica", "Paciente")">Ficha Clínica</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Tratamientos", "Paciente")">Tratamientos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Archivos", "Paciente")">Archivos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("AsistenteIA", "Paciente")">Asistente IA</a>
+                    </li>
+                </ul>
+
+
+                <!-- -------------------inicio ficha clinica------------------ -->
+                <div class="card shadow-lg mt-4 p-4" style="background-color: #f9f9f9; border-left: 5px solid #0d6efd; border-radius: 10px;">
+                    <div class="d-flex ms-3">
+                        <div class="me-4">
+                            <img src="https://plus.unsplash.com/premium_photo-1682144187125-b55e638cf286?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cG9ydHJhaXQlMjBtYW58ZW58MHx8MHx8fDA%3D"
+                                 alt="Foto del paciente"
+                                 class="img-thumbnail shadow-sm"
+                                 style="width: 150px; height: 150px; object-fit: cover">
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h4 class="text-primary mb-1">Información Personal</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <p class="mb-2"><strong>Cédula:</strong> <span>12345678</span></p>
+                                    <p class="mb-2"><strong>Nombre completo:</strong><span>Juan Pérez López</span></p>
+                                    <p class="mb-2"><strong>Correo electrónico:</strong> <span>juan.perez@mail.com</span></p>
+                                    <p class="mb-2"><strong>Teléfono:</strong> <span>+506 1234-5678</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-3">
+
+                    <!-- Historial médico -->
+                    <div class="row ms-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4 class="text-primary mb-3">Historial Médico</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <p class="mb-2"><strong>Antecedentes Patológicos:</strong></p>
+                            <div class="row">
+                                <ul class="ms-3 col-md-6" style="list-style-type: disc;">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle-fill text-success "></i>Hipertensión
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle-fill text-success "></i>Asma
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle-fill text-success "></i>Hipertensión
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <p class="mb-2"><strong>Antecedentes Personales:</strong></p>
+                            <p class="text-justify lh-base">
+                                El paciente reporta un historial de lesiones musculoesqueléticas, estrés laboral frecuente y malos hábitos posturales, factores que podrían influir en su estado actual de salud.
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr class="my-3">
+
+                    <div class="row ms-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4 class="text-primary mb-3">Estilo de Vida</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <p><strong>Hace ejercicio regularmente:</strong> <span id="PacienteEjercicio" class="badge bg-success text-white">Sí</span></p>
+                        </div>
+                        <div class="col-md-7">
+                            <p><strong>Consumo diario de agua:</strong> <span id="PacienteAgua" class="badge bg-primary text-white">2.5 litros</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ms-3">
+                    <div class="col-md-12">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+        $(document).ready(function () {
+            $("#tablaTratamientos").DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/2.1.8/i18n/es-ES.json',
+                },
+                responsive: true,
+                columnDefs: [
+                    {
+                        targets: [8],
+                        orderable: false,
+                        className: 'text-center'
+                    }
+                ]
+            });
+            $("#tablaArchivos").DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/2.1.8/i18n/es-ES.json',
+                },
+                responsive: true,
+                order: [[2, 'desc']],
+                columnDefs: [
+                    {
+                        targets: [5],
+                        className: 'text-center',
+                        orderable: false
+                    }
+                ]
+            });
+        });
+</script>

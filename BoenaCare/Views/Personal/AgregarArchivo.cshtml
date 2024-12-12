@@ -1,0 +1,80 @@
+﻿<div class="container">
+    <div class="row px-5">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-auto">
+                    <a href="@Url.Action("InformacionPaciente", "Personal")" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-left"></i> Regresar
+                    </a>
+                </div>
+            </div>
+            <div class="row pt-3 pb-1">
+                <div class="col-12">
+                    <div class="display-3" style="font-size: 2.5rem;">Agregar Archivo</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="container-form ms-5 mt-4 mx-auto p-4 rounded shadow-lg" style="max-width: 900px; background-color: #f9f9f9; margin-left: 0px;">
+                <!-- Formulario de agregar archivo -->
+                <form>
+                    <div class="row g-3">
+                        <!-- Título del archivo -->
+                        <div class="col-md mt-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="ArchivoTitulo" placeholder="Título del archivo" required>
+                                <label for="ArchivoTitulo">Título</label>
+                            </div>
+                        </div>
+
+                        <!-- Tipo de documento -->
+                        <div class="col-md mt-3">
+                            <div class="form-floating">
+                                <select class="form-select" id="ArchivoTipoDocumento" required>
+                                    <option selected disabled value="">Selecciona un tipo de documento</option>
+                                    <option value="pdf">PDF</option>
+                                    <option value="word">Word</option>
+                                    <option value="imagen">Imagen</option>
+                                </select>
+                                <label for="ArchivoTipoDocumento">Tipo de Documento</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mt-2">
+                        <!-- Sesión relacionada -->
+                        <div class="col-md">
+                            <div class="form-floating">
+                                <select class="form-select" id="ArchivoSesion">
+                                    <option selected disabled value="">Selecciona una sesión</option>
+                                    <option value="3">No aplica</option>
+                                    <option value="1">Sesión 1</option>
+                                    <option value="2">Sesión 2</option>
+                                    <option value="3">Sesión 3</option>
+                                </select>
+                                <label for="ArchivoSesion">Sesión</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mt-2">
+                        <!-- Archivo -->
+                        <div class="col-md">
+                            <label for="ArchivoFile" class="form-label">Archivo</label>
+                            <input type="file" class="form-control" id="ArchivoFile" accept=".pdf, .doc, .docx, .jpg, .jpeg, .png" required>
+                        </div>
+                    </div>
+
+                    <!-- Botón Guardar -->
+                    <div class="row g-2 mt-4">
+                        <div class="col-md">
+                            <button type="button" class="btn btn-primary w-100" id="guardarArchivo">Guardar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

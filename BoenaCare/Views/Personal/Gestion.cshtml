@@ -1,0 +1,190 @@
+﻿<style>
+    .card-img-top {
+        width: 100%; /* Ensures the image stretches to fill the width */
+        height: 200px; /* Fixed height for consistency */
+        object-fit: cover; /* Makes the image cover the area without distortion */
+    }
+</style>
+
+<div class="row px-5">
+    <div class="col-12">
+        <!-- Botón regresar -->
+        <div class="row">
+            <div class="col-auto">
+                <a href="@Url.Action("Listado", "Personal")" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-arrow-left"></i> Regresar
+                </a>
+            </div>
+        </div>
+
+        <!-- Título -->
+        <div class="row pt-3 pb-3">
+            <div class="col-12">
+                <div class="display-3" style="font-size: 2.5rem;">Fisioterapeuta: Ignasio Miranda</div>
+            </div>
+        </div>
+
+        <!-- Barra de tabs -->
+        <div class="row mt-2">
+            <div class="col-12">
+                <ul class="nav nav-tabs nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Gestion", "Personal")">Información General</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("VistaAsignacionPersonal", "Personal")">Asignaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("AsignarAccesos", "Personal")">Permisos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Información del empleado -->
+        <div class="container-fluid mt-1">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-lg mt-4 p-4" style="background-color: #f9f9f9; border-left: 5px solid #0d6efd; border-radius: 10px;">
+                        <h3 class="text-center mb-4">Información del Empleado</h3>
+
+                        <!-- Primera fila -->
+                        <div class="row g-3">
+                            <!-- Nombre -->
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="PersonalNombre" value="Ignasio Miranda" readonly>
+                                    <label for="PersonalNombre">Nombre</label>
+                                </div>
+                            </div>
+
+                            <!-- Fecha de contratación -->
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="PersonalFechaContratacion" value="2023-02-15" readonly>
+                                    <label for="PersonalFechaContratacion">Fecha de contratación</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Segunda fila -->
+                        <div class="row g-3 mt-2">
+                            <!-- Alias -->
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="PersonalAlias" value="Ignacio" readonly>
+                                    <label for="PersonalAlias">Alias</label>
+                                </div>
+                            </div>
+
+                            <!-- Edad -->
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="PersonalEdad" value="45" readonly>
+                                    <label for="PersonalEdad">Edad</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tercera fila -->
+                        <div class="row g-3 mt-2">
+                            <!-- Correo -->
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="PersonalCorreo" value="ignasio.miranda@email.com" readonly>
+                                    <label for="PersonalCorreo">Correo</label>
+                                </div>
+                            </div>
+
+                            <!-- Cédula -->
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="PersonalCedula" value="123456789" readonly>
+                                    <label for="PersonalCedula">Cédula</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cuarta fila -->
+                        <div class="row g-3 mt-2">
+                            <!-- Especialidad -->
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <select class="form-select" id="PersonalEspecialidad" disabled>
+                                        <option value="geriatrica" selected>Fisioterapia Geriátrica</option>
+                                        <option value="deportiva">Fisioterapia Deportiva</option>
+                                        <option value="pediatrica">Fisioterapia Pediátrica</option>
+                                        <option value="neurologica">Fisioterapia Neurológica</option>
+                                    </select>
+                                    <label for="PersonalEspecialidad">Especialidad</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Foto -->
+                        <div class="row g-3 mt-2">
+                            <div class="col-md text-center">
+                                <img src="https://images.pexels.com/photos/1844547/pexels-photo-1844547.jpeg" class="img-fluid" alt="Foto de empleado" style="max-width: 150px;">
+                            </div>
+                        </div>
+
+                        <!-- Botones -->
+                        <div class="row g-2 mt-4 text-center">
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-warning w-100" id="editarEmpleado">Editar</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#EliminacionModal" id="eliminarEmpleado">
+                                    Eliminar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Eliminación -->
+<div class="modal fade" id="EliminacionModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="confirmarEliminacionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title text-white" id="confirmarEliminacionModalLabel">Confirmar Eliminación</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <p>¿Está seguro de que desea realizar esta acción? Ingrese su contraseña para confirmar.</p>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-danger" id="confirmarEliminarBtn">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Ensure saved section is scrollable while maintaining its height */
+    #saved-section .overflow-auto {
+        height: calc(100vh - 50px); /* Adjust this value for the desired height */
+    }
+
+    /* Style for chat blank space */
+    #blank-space {
+        height: calc(100vh - 250px); /* Adjust this value for the desired height */
+    }
+</style>
+
+<link rel="stylesheet" href="~/Recursos/css/datepicker.material.css">
+<script src="~/Recursos/plugins/datepicker.js"></script>
+<script>
+    var multi = new Datepicker('#multi', {
+        multiple: true
+    });
+</script>

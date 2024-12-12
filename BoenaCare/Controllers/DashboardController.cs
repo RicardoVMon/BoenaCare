@@ -6,11 +6,12 @@ using System.Web.Mvc;
 
 namespace BoenaCare.Controllers
 {
-    public class HomeController : Controller
+    public class DashboardController : Controller
     {
-        public ActionResult Index()
+        // GET: Dashboard
+        public ActionResult Dashboard()
         {
-            return View("~/Views/Dashboard/Dashboard.cshtml");
+            return View();
         }
     }
 }

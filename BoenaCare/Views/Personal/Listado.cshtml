@@ -1,0 +1,96 @@
+﻿<div class="row px-5">
+    <div class="col-12 mb-4">
+        <div class="display-3 px-0">Listado de Personal</div>
+        <div class="text-muted px-0 ">Seleccione un fisioterapeuta para gestionar su información</div>
+    </div>
+    <div class="col-12 mb-3">
+        <div class="row justify-content-between">
+            <div class="col-6">
+                <a href="@Url.Action("Agregar", "Personal")" id="AgregarNuevoPersonal" class="btn btn-primary">
+                    <i class="fa-regular fa-square-plus"></i> Registrar nuevo fisioterapeuta
+                </a>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="Buscar...">
+                    </div>
+                    <div class="col-6">
+                        <select class="form-select" style="border-radius: 10px;">
+                            <option selected disabled>Ordenar por</option>
+                            <option value="nombre">Nombre</option>
+                            <option value="fechaContratacion">Fecha de contratación</option>
+                            <option value="alias">Alias</option>
+                            <option value="edad">Edad</option>
+                            <option value="correo">Correo</option>
+                            <option value="cedula">Cédula</option>
+                            <option value="especialidad">Especialidad</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="row">
+            <div class="col-3 mb-4">
+                <div class="card card-hover">
+                    <img class="card-img-top" src="https://images.pexels.com/photos/1844547/pexels-photo-1844547.jpeg" alt="Imagen de Ignasio Miranda">
+                    <div class="card-body">
+                        <h5 class="card-title">Ignasio Miranda</h5>
+                        <p class="card-text">Fisioterapeuta Geriátrico</p>
+                        <br />
+                        <a href="@Url.Action("Gestion", "Personal")" class="btn btn-primary">Visualizar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-4">
+                <div class="card card-hover">
+                    <img class="card-img-top" src="https://images.pexels.com/photos/19963193/pexels-photo-19963193.jpeg" alt="Imagen de Claudia Gomez">
+                    <div class="card-body">
+                        <h5 class="card-title">Claudia Gomez</h5>
+                        <p class="card-text">Fisioterapeuta Deportiva</p>
+                        <br />
+                        <a href="@Url.Action("Gestion", "Personal")" class="btn btn-primary">Visualizar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-4">
+                <div class="card card-hover">
+                    <img class="card-img-top" src="https://images.pexels.com/photos/6094059/pexels-photo-6094059.jpeg" alt="Imagen de Graciela Ulate">
+                    <div class="card-body">
+                        <h5 class="card-title">Graciela Ulate</h5>
+                        <p class="card-text">Fisioterapeuta Pediátrica</p>
+                        <br />
+                        <a href="@Url.Action("Gestion", "Personal")" class="btn btn-primary">Visualizar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-4">
+                <div class="card card-hover">
+                    <img class="card-img-top" src="https://images.pexels.com/photos/20860602/pexels-photo-20860602/free-photo-of-fisioterapeuta-masajeando-la-espalda.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagen de Graciela Ulate">
+                    <div class="card-body">
+                        <h5 class="card-title">Graciela Ulate</h5>
+                        <p class="card-text">Fisioterapeuta Pediátrica</p>
+                        <br />
+                        <a href="@Url.Action("Gestion", "Personal")" class="btn btn-primary">Visualizar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-4">
+                <div class="card card-hover">
+                    <img class="card-img-top" src="https://images.pexels.com/photos/20860602/pexels-photo-20860602/free-photo-of-fisioterapeuta-masajeando-la-espalda.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagen de Graciela Ulate">
+                    <div class="card-body">
+                        <h5 class="card-title">Graciela Ulate</h5>
+                        <p class="card-text">Fisioterapeuta Pediátrica</p>
+                        <br />
+                        <a href="@Url.Action("Gestion", "Personal")" class="btn btn-primary">Visualizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="~/Recursos/css/EstilosPersonal.css">

@@ -1,0 +1,98 @@
+﻿<div class="row px-5">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-auto">
+                <a href="@Url.Action("Listado", "Personal")" class="btn btn-primary btn-sm mb-3">
+                    <i class="fa-solid fa-arrow-left"></i> Regresar
+                </a>
+            </div>
+        </div><div class="row px-5">
+            <div class="col-12 mb-4">
+                <div class="display-3 px-0">Registrar nuevo empleado</div>
+                <div class="text-muted px-0 ">Complete los campos requeridos a continuación</div>
+            </div><div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="container-form ms-5 mt-4 mx-auto p-4 rounded shadow-lg" style="max-width: 900px; background-color: #f9f9f9; margin-left: 0px;">
+                            <form>
+                                <div class="row g-3">
+                                    <!-- Nombre -->
+                                    <div class="col-md mt-3">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="PersonalNombre" placeholder="Nombre del empleado" required>
+                                            <label for="PersonalNombre">Nombre</label>
+                                        </div>
+                                    </div>
+                                    <!-- Fecha de contratación -->
+                                    <div class="col-md mt-3">
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control" id="PersonalFechaContratacion" placeholder="Fecha de contratación" required>
+                                            <label for="PersonalFechaContratacion">Fecha de contratación</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-3 mt-2">
+                                    <!-- Alias -->
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="PersonalAlias" placeholder="Alias" required>
+                                            <label for="PersonalAlias">Alias</label>
+                                        </div>
+                                    </div>
+                                    <!-- Edad -->
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="PersonalEdad" placeholder="Edad" required>
+                                            <label for="PersonalEdad">Edad</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-3 mt-2">
+                                    <!-- Correo -->
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="PersonalCorreo" placeholder="Correo electrónico" required>
+                                            <label for="PersonalCorreo">Correo</label>
+                                        </div>
+                                    </div>
+                                    <!-- Cédula -->
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="PersonalCedula" placeholder="Cédula" required>
+                                            <label for="PersonalCedula">Cédula</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-3 mt-2">
+                                    <!-- Especialidad -->
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="PersonalEspecialidad" required>
+                                                <option selected disabled value="">Selecciona una especialidad</option>
+                                                <option value="geriatrica">Fisioterapia Geriátrica</option>
+                                                <option value="deportiva">Fisioterapia Deportiva</option>
+                                                <option value="pediatrica">Fisioterapia Pediátrica</option>
+                                                <option value="neurologica">Fisioterapia Neurológica</option>
+                                            </select>
+                                            <label for="PersonalEspecialidad">Especialidad</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Foto -->
+                                <div class="row g-3 mt-2">
+                                    <div class="col-md">
+                                        <label for="PersonalFoto" class="form-label">Foto del empleado</label>
+                                        <input type="file" class="form-control" id="PersonalFoto" accept="image/*" required>
+                                    </div>
+                                </div>
+                                <!-- Botón Guardar -->
+                                <div class="row g-2 mt-4">
+                                    <div class="col-md">
+                                        <button type="button" class="btn btn-primary w-100" id="guardarEmpleado">Guardar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>

@@ -6,16 +6,15 @@ using System.Web.Mvc;
 
 namespace BoenaCare.Controllers
 {
-    public class AutenticacionController : Controller
+    public class GestionExternaController : Controller
     {
-        [HttpGet]
-        public ActionResult Login()
+        // GET: GestionExterna
+        public ActionResult Formulario()
         {
             return View();
         }
-
-        [HttpGet]
-        public ActionResult RecuperarContrasenna()
+        // GET: GestionExterna
+        public ActionResult TablaCierres()
         {
             return View();
         }
