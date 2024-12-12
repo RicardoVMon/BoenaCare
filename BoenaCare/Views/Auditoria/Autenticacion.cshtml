@@ -1,0 +1,72 @@
+﻿<div class="row px-5">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-6">
+                <div class="display-3 px-0">Auditoría</div>
+                <div class="text-muted px-0 ">Autenticación</div>
+            </div>
+        </div>
+        <div class="row mt-3 mb-2"></div>
+        <div class="row">
+            <div class="col-12 px-0">
+                <div class="table-responsive shadow-lg" style="background-color: #f9f9f9; border-left: 5px solid #0d6efd; border-radius: 10px;">
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Cédula</th>
+                                <th>Contraseña</th>
+                                <th>Nombre</th>
+                                <th>Resultado del Intento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>11/12/2024 19:40:11</td>
+                                <td>
+                                    <div class="d-flex align-content-start">
+                                        117310079
+                                    </div>
+                                </td>
+                                <td>pw12345</td>
+                                <td>Juan Pérez</td>
+                                <td>Exitoso</td>
+                            </tr>
+                            <tr>
+                                <td>11/12/2024 19:46:38</td>
+                                <td>
+                                    <div class="d-flex align-content-start">
+                                        163458465
+                                    </div>
+                                </td>
+                                <td>pw54321</td>
+                                <td>Mario Sánchez</td>
+                                <td>Fallido</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $("#example").DataTable({
+            language: {
+                url: '//cdn.datatables.net/plug-ins/2.1.8/i18n/es-ES.json',
+            },
+            responsive: true,  
+            columnDefs: [
+                {
+                    targets: [4], 
+                    className: 'text-center' 
+                }
+            ]
+        });
+
+    });
+</script>

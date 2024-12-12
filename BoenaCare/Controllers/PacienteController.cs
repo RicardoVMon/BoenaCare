@@ -43,5 +43,11 @@ namespace BoenaCare.Controllers
         {
             return View();
         }
+
+        public ActionResult EditarPaciente()
+        {
+            return View();
+        }
+        
     }
 }

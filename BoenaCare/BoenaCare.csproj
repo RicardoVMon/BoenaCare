@@ -358,6 +358,13 @@
     <Content Include="Views\Paciente\AsistenteIA.cshtml" />
     <Content Include="Views\Personal\AsignarAccesos.cshtml" />
     <Content Include="Views\Personal\VistaAsignacionPersonal.cshtml" />
+    <Content Include="Views\Paciente\EditarPaciente.cshtml" />
+    <Content Include="Views\Auditoria\Autenticacion.cshtml" />
+    <Content Include="Views\Auditoria\Personal.cshtml" />
+    <Content Include="Views\Auditoria\Pacientes.cshtml" />
+    <Content Include="Views\Auditoria\FichasClinicas.cshtml" />
+    <Content Include="Views\Auditoria\Archivos.cshtml" />
+    <Content Include="Views\Auditoria\Tratamientos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
