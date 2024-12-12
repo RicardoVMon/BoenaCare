@@ -1,7 +1,68 @@
-﻿
-@{
-    ViewBag.Title = "Auditoria";
-}
+﻿<div class="row px-5">
+    <div class="col-12 mb-4">
+        <div class="display-3 px-0">Auditoría</div>
+        <div class="text-muted px-0 ">Seleccione una opción para visualizar los registros</div>
+    </div>
+    <div class="col-12 mb-3"></div>
 
-<h2>Auditoría</h2>
+    <div class="col-12">
+        <div class="row">
+            <div class="col-3 mb-4">
+                <div class="card card-hover">
+                    <div class="card-body">
+                        <h5 class="card-title">Autenticación</h5>
+                        <br />
+                        <a href="@Url.Action("Autenticacion", "Auditoria")" class="btn btn-primary">Visualizar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-4">
+                <div class="card card-hover">
+                    <div class="card-body">
+                        <h5 class="card-title">Personal</h5>
+                        <br />
+                        <a href="@Url.Action("Personal", "Auditoria")" class="btn btn-primary">Visualizar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-4">
+                <div class="card card-hover">
+                    <div class="card-body">
+                        <h5 class="card-title">Pacientes</h5>
+                        <br />
+                        <a href="@Url.Action("Pacientes", "Auditoria")" class="btn btn-primary">Visualizar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-4">
+                <div class="card card-hover">
+                    <div class="card-body">
+                        <h5 class="card-title">Fichas Clínicas</h5>
+                        <br />
+                        <a href="@Url.Action("FichasClinicas", "Auditoria")" class="btn btn-primary">Visualizar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-4">
+                <div class="card card-hover">
+                    <div class="card-body">
+                        <h5 class="card-title">Archivos</h5>
+                        <br />
+                        <a href="@Url.Action("Archivos", "Auditoria")" class="btn btn-primary">Visualizar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-4">
+                <div class="card card-hover">
+                    <div class="card-body">
+                        <h5 class="card-title">Tratamientos</h5>
+                        <br />
+                        <a href="@Url.Action("Tratamientos", "Auditoria")" class="btn btn-primary">Visualizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<link rel="stylesheet" href="~/Recursos/css/EstilosPersonal.css">

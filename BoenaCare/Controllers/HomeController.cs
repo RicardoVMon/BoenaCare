@@ -10,7 +10,7 @@ namespace BoenaCare.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View("~/Views/Dashboard/Dashboard.cshtml");
         }
     }
 }
